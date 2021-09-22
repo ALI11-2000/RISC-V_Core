@@ -1,0 +1,43 @@
+$date
+   Mon Sep 20 21:51:33 2021
+$end
+$version
+  2018.2
+$end
+$timescale
+  1ps
+$end
+$scope module tb_top $end
+$scope module dut $end
+$scope module a1 $end
+$var wire 4 ! A [3:0] $end
+$var wire 4 " B [3:0] $end
+$var reg 8 # R [7:0] $end
+$var reg 4 $ X1 [3:0] $end
+$var reg 4 % X2 [3:0] $end
+$var reg 4 & X3 [3:0] $end
+$var reg 4 ' X0 [3:0] $end
+$var reg 8 ( Y1 [7:0] $end
+$var reg 8 ) Y2 [7:0] $end
+$var reg 8 * Y3 [7:0] $end
+$var reg 8 + Y0 [7:0] $end
+$var parameter 32 , Width [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+bx "
+bx #
+bx $
+bx %
+bx &
+bx '
+bx (
+bx )
+bx *
+bx +
+b100 ,
+$end

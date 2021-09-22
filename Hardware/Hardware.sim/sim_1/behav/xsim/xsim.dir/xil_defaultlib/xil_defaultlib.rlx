@@ -1,0 +1,10 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/ff/Desktop/CA_LAB/Hardware/Hardware.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/Hardware/Hardware.srcs/sim_1/new/tb_top.v,1632156667,verilog,,,,tb_top,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/BCD.sv,1632155106,systemVerilog,,C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/clkdiv.sv,,BCD,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/clkdiv.sv,1632156231,systemVerilog,,C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/tasks.sv,,clkdiv,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/tasks.sv,1632152771,systemVerilog,,C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/top.sv,,tasks,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/Lab1/Task3/top.sv,1632156613,systemVerilog,,,,top,,,,,,,,

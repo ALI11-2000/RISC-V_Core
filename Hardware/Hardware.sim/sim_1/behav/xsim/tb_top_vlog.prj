@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../Lab1/Task3/BCD.sv" \
+"../../../../../Lab1/Task3/clkdiv.sv" \
+"../../../../../Lab1/Task3/tasks.sv" \
+"../../../../../Lab1/Task3/top.sv" \
+
+verilog xil_defaultlib  \
+"../../../../Hardware.srcs/sim_1/new/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
