@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 2e1e39768fa341c292e5c89cd47f24d3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dp_cont_behav xil_defaultlib.tb_dp_cont xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ff/Desktop/CA_LAB/Lab2/dp_cont.sv" Line 1. Module dp_cont doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dp_cont
+Compiling module xil_defaultlib.tb_dp_cont
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dp_cont_behav
