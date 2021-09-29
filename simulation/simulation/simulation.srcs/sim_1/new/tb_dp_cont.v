@@ -21,10 +21,14 @@
 
 
 module tb_dp_cont;
-    reg clk, ready, rst1;
-    reg [3:0] no0, no1, no2, no3;
-    wire [3:0] num0, num1, num2, num3;
-    dp_cont dut(clk, ready, rst1,no0, no1, no2, no3,num0, num1, num2, num3,done);
+    reg [1:0] sel1;
+    reg clk,rst, write,order,ready;
+    reg [3:0] num;
+    wire [6:0] seg;
+    wire [7:0] ano;
+    
+    top dut(seg, ano ,num ,  sel1,clk,rst, write,order,ready
+    );
     
     initial begin
         clk = 0;
@@ -32,29 +36,29 @@ module tb_dp_cont;
     end
     
     initial begin
-        rst1 = 1;
-        no0= 4'd2;
-        no1= 4'd5;
-        no2= 4'd4;
-        no3= 4'd1;
-        repeat(2) @(posedge clk);
-        rst1 = 0;
-        ready = 1;
-        repeat(2) @(posedge clk);
+        rst = 1;
+        num = 4'd12;
+        sel1 = 2'd1;
+        write = 1;
+        order = 0;
         ready = 0;
-        @(posedge done);
         repeat(2) @(posedge clk);
-        no0= 4'd4;
-                no1= 4'd7;
-                no2= 4'd5;
-                no3= 4'd4;
-                repeat(2) @(posedge clk);
-                rst1 = 0;
-                ready = 1;
+        rst = 0;
+        write = 0;
+        repeat(2) @(posedge clk);
+        num = 4'd2;
+        sel1 = 2'd2;
+        write = 1;
+        order = 0;
+        ready = 0;
+        repeat(2) @(posedge clk);
+        write = 0;
+        repeat(2) @(posedge clk);
+        ready = 1;
+        order = 1;
                 repeat(2) @(posedge clk);
                 ready = 0;
-                @(posedge done);
-                repeat(2) @(posedge clk);
+        repeat(42) @(posedge clk);
         $stop;
     end
 

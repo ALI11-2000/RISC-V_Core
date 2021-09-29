@@ -1,0 +1,105 @@
+$date
+	Sat Sep 25 20:04:51 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module half_adder $end
+$var wire 2 ! A [1:0] $end
+$var wire 2 " B [1:0] $end
+$var wire 1 # C $end
+$var wire 1 $ I $end
+$var wire 1 % X $end
+$var wire 1 & Y $end
+$var wire 1 ' Z $end
+$var wire 2 ( S [1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+0'
+0&
+0%
+0$
+0#
+b0 "
+b0 !
+$end
+#2000
+b1 (
+b1 "
+#4000
+b10 (
+1'
+b10 "
+#6000
+b11 (
+b11 "
+#8000
+b1 (
+0'
+b1 !
+b0 "
+#10000
+b10 (
+1%
+b1 "
+#12000
+0%
+b11 (
+1'
+b10 "
+#14000
+1#
+1$
+b0 (
+1%
+b11 "
+#16000
+0#
+b10 (
+0$
+0%
+b10 !
+b0 "
+#18000
+b11 (
+b1 "
+#20000
+1#
+b0 (
+0'
+1&
+b10 "
+#22000
+b1 (
+b11 "
+#24000
+0#
+b11 (
+1'
+0&
+b11 !
+b0 "
+#26000
+1#
+1$
+b0 (
+1%
+b1 "
+#28000
+0$
+0%
+b1 (
+0'
+1&
+b10 "
+#30000
+b10 (
+1%
+b11 "
+#32001

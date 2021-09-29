@@ -4,4 +4,6 @@ Jun 14 2018
 20:41:02
 C:/Users/ff/Desktop/CA_LAB/Lab2/dp_cont.sv,1632327609,systemVerilog,,,,dp_cont,,,,,,,,
 C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sim_1/new/tb_dp_cont.v,1632327722,verilog,,,,tb_dp_cont,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sim_1/new/tb_dp_cont.v,1632336722,verilog,,,,tb_dp_cont,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sources_1/imports/Task3/clkdiv.sv,1632336107,systemVerilog,,C:/Users/ff/Desktop/CA_LAB/Lab2/dp_cont.sv,,clkdiv,,,,,,,,
+C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sources_1/new/top.v,1632336053,verilog,,,,top,,,,,,,,

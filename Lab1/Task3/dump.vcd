@@ -1,0 +1,60 @@
+$date
+	Sat Sep 25 21:23:50 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mul4x4 $end
+$var wire 4 ! A [3:0] $end
+$var wire 4 " B [3:0] $end
+$var reg 8 # R [7:0] $end
+$var reg 4 $ X0 [3:0] $end
+$var reg 4 % X1 [3:0] $end
+$var reg 4 & X2 [3:0] $end
+$var reg 4 ' X3 [3:0] $end
+$var reg 8 ( Y0 [7:0] $end
+$var reg 8 ) Y1 [7:0] $end
+$var reg 8 * Y2 [7:0] $end
+$var reg 8 + Y3 [7:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111000 +
+b111100 *
+b11110 )
+b1111 (
+b1111 '
+b1111 &
+b1111 %
+b1111 $
+b11100001 #
+b1111 "
+b1111 !
+$end
+#2000
+b110 #
+b0 +
+b0 *
+b100 )
+b10 (
+b0 '
+b0 &
+b10 %
+b10 $
+b10 !
+b11 "
+#4000
+b1001000 #
+b1000000 +
+b0 )
+b1000 (
+b1000 '
+b0 %
+b1000 $
+b1000 !
+b1001 "
+#6001

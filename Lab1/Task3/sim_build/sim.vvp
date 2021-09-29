@@ -1,0 +1,108 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000020facaeb8b0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0000020facb02ce0 .scope module, "mul4x4" "mul4x4" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 8 "R";
+P_0000020facb39260 .param/l "Width" 0 3 2, +C4<00000000000000000000000000000100>;
+o0000020facb39f88 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000020facaeba40_0 .net "A", 3 0, o0000020facb39f88;  0 drivers
+o0000020facb39fb8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000020facb02e70_0 .net "B", 3 0, o0000020facb39fb8;  0 drivers
+v0000020facb02f10_0 .var "R", 7 0;
+v0000020facb02fb0_0 .var "X0", 3 0;
+v0000020facb03050_0 .var "X1", 3 0;
+v0000020facb030f0_0 .var "X2", 3 0;
+v0000020facb33a90_0 .var "X3", 3 0;
+v0000020facb33b30_0 .var "Y0", 7 0;
+v0000020facb33bd0_0 .var "Y1", 7 0;
+v0000020facb33c70_0 .var "Y2", 7 0;
+v0000020facb33d10_0 .var "Y3", 7 0;
+E_0000020facb39560/0 .event anyedge, v0000020facb02fb0_0, v0000020facb03050_0, v0000020facb030f0_0, v0000020facb33a90_0;
+E_0000020facb39560/1 .event anyedge, v0000020facb33b30_0, v0000020facb33bd0_0, v0000020facb33c70_0, v0000020facb33d10_0;
+E_0000020facb39560 .event/or E_0000020facb39560/0, E_0000020facb39560/1;
+E_0000020facb392e0 .event anyedge, v0000020facaeba40_0, v0000020facb02e70_0;
+    .scope S_0000020facb02ce0;
+T_0 ;
+    %wait E_0000020facb392e0;
+    %load/vec4 v0000020facaeba40_0;
+    %load/vec4 v0000020facb02e70_0;
+    %parti/s 1, 0, 2;
+    %replicate 4;
+    %and;
+    %store/vec4 v0000020facb02fb0_0, 0, 4;
+    %load/vec4 v0000020facaeba40_0;
+    %load/vec4 v0000020facb02e70_0;
+    %parti/s 1, 1, 2;
+    %replicate 4;
+    %and;
+    %store/vec4 v0000020facb03050_0, 0, 4;
+    %load/vec4 v0000020facaeba40_0;
+    %load/vec4 v0000020facb02e70_0;
+    %parti/s 1, 2, 3;
+    %replicate 4;
+    %and;
+    %store/vec4 v0000020facb030f0_0, 0, 4;
+    %load/vec4 v0000020facaeba40_0;
+    %load/vec4 v0000020facb02e70_0;
+    %parti/s 1, 3, 3;
+    %replicate 4;
+    %and;
+    %store/vec4 v0000020facb33a90_0, 0, 4;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0000020facb02ce0;
+T_1 ;
+    %wait E_0000020facb39560;
+    %pushi/vec4 0, 0, 4;
+    %load/vec4 v0000020facb02fb0_0;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0000020facb33b30_0, 0, 8;
+    %pushi/vec4 0, 0, 3;
+    %load/vec4 v0000020facb03050_0;
+    %concat/vec4; draw_concat_vec4
+    %concati/vec4 0, 0, 1;
+    %store/vec4 v0000020facb33bd0_0, 0, 8;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v0000020facb030f0_0;
+    %concat/vec4; draw_concat_vec4
+    %concati/vec4 0, 0, 2;
+    %store/vec4 v0000020facb33c70_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %load/vec4 v0000020facb33a90_0;
+    %concat/vec4; draw_concat_vec4
+    %concati/vec4 0, 0, 3;
+    %store/vec4 v0000020facb33d10_0, 0, 8;
+    %load/vec4 v0000020facb33b30_0;
+    %load/vec4 v0000020facb33bd0_0;
+    %add;
+    %load/vec4 v0000020facb33c70_0;
+    %add;
+    %load/vec4 v0000020facb33d10_0;
+    %add;
+    %store/vec4 v0000020facb02f10_0, 0, 8;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0000020facb02ce0;
+T_2 ;
+    %vpi_call/w 3 26 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 27 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "mul4x4.sv";

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1632586261" />
+    <testcase name="half_adder_test" classname="test_full_adder" file="C:\Users\ff\Desktop\CA_LAB\Lab1\Task2\test_full_adder.py" lineno="7" time="0.10686612129211426" sim_time_ns="64.001" ratio_time="598.8895192055846" />
+  </testsuite>
+</testsuites>

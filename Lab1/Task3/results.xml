@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1632587030" />
+    <testcase name="mu4x4_test" classname="test_mul4x4" file="C:\Users\ff\Desktop\CA_LAB\Lab1\Task3\test_mul4x4.py" lineno="7" time="0.11111092567443848" sim_time_ns="6.001" ratio_time="54.009090137393706" />
+  </testsuite>
+</testsuites>

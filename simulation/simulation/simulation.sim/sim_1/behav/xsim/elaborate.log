@@ -5,10 +5,14 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sources_1/new/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/ff/Desktop/CA_LAB/Lab2/dp_cont.sv" Line 1. Module dp_cont doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ff/Desktop/CA_LAB/simulation/simulation/simulation.srcs/sources_1/imports/Task3/clkdiv.sv" Line 1. Module clkdiv doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.dp_cont
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.tb_dp_cont
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_dp_cont_behav

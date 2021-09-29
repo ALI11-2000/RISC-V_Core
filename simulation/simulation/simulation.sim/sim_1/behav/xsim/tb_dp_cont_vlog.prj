@@ -1,5 +1,9 @@
 # compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../simulation.srcs/sources_1/new/top.v" \
+
 sv xil_defaultlib  \
+"../../../../simulation.srcs/sources_1/imports/Task3/clkdiv.sv" \
 "../../../../../../Lab2/dp_cont.sv" \
 
 verilog xil_defaultlib  \

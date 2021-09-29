@@ -1,0 +1,71 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_00000219be8cb8f0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_00000219be7b2ce0 .scope module, "half_adder" "half_adder" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /OUTPUT 2 "S";
+    .port_info 3 /OUTPUT 1 "C";
+P_00000219be7d5340 .param/l "Width" 0 3 2, +C4<00000000000000000000000000000010>;
+L_00000219be7b32f0 .functor XOR 1, L_00000219be7d8490, L_00000219be7d8a30, C4<0>, C4<0>;
+L_00000219be8cba80 .functor AND 1, L_00000219be7d8530, L_00000219be7d85d0, C4<1>, C4<1>;
+L_00000219be8cbaf0 .functor XOR 1, L_00000219be7e30d0, L_00000219be7e4430, L_00000219be8cba80, C4<0>;
+L_00000219be7b2f80 .functor XOR 1, L_00000219be7e3350, L_00000219be7e2bd0, C4<0>, C4<0>;
+L_00000219be7b2ff0 .functor AND 1, L_00000219be7e3710, L_00000219be7e3a30, C4<1>, C4<1>;
+L_00000219be7b3060 .functor AND 1, L_00000219be8cba80, L_00000219be7b2f80, C4<1>, C4<1>;
+L_00000219be7b30d0 .functor OR 1, L_00000219be7b3060, L_00000219be7b2ff0, C4<0>, C4<0>;
+o00000219be7e6fd8 .functor BUFZ 2, C4<zz>; HiZ drive
+v00000219be7d87b0_0 .net "A", 1 0, o00000219be7e6fd8;  0 drivers
+o00000219be7e7008 .functor BUFZ 2, C4<zz>; HiZ drive
+v00000219be7d8d50_0 .net "B", 1 0, o00000219be7e7008;  0 drivers
+v00000219be7d8b70_0 .net "C", 0 0, L_00000219be7b30d0;  1 drivers
+v00000219be7d83f0_0 .net "I", 0 0, L_00000219be7b3060;  1 drivers
+v00000219be7d8c10_0 .net "S", 1 0, L_00000219be7d8ad0;  1 drivers
+v00000219be7d8350_0 .net "X", 0 0, L_00000219be8cba80;  1 drivers
+v00000219be7d9110_0 .net "Y", 0 0, L_00000219be7b2ff0;  1 drivers
+v00000219be7d8cb0_0 .net "Z", 0 0, L_00000219be7b2f80;  1 drivers
+v00000219be7d91b0_0 .net *"_ivl_0", 0 0, L_00000219be7b32f0;  1 drivers
+v00000219be7d8990_0 .net *"_ivl_10", 0 0, L_00000219be8cbaf0;  1 drivers
+v00000219be7d8850_0 .net *"_ivl_14", 0 0, L_00000219be7e30d0;  1 drivers
+v00000219be7d88f0_0 .net *"_ivl_16", 0 0, L_00000219be7e4430;  1 drivers
+v00000219be7d8df0_0 .net *"_ivl_18", 0 0, L_00000219be7e3350;  1 drivers
+v00000219be7d8710_0 .net *"_ivl_20", 0 0, L_00000219be7e2bd0;  1 drivers
+v00000219be7d8e90_0 .net *"_ivl_22", 0 0, L_00000219be7e3710;  1 drivers
+v00000219be7d8670_0 .net *"_ivl_24", 0 0, L_00000219be7e3a30;  1 drivers
+v00000219be7d82b0_0 .net *"_ivl_3", 0 0, L_00000219be7d8490;  1 drivers
+v00000219be7d8f30_0 .net *"_ivl_5", 0 0, L_00000219be7d8a30;  1 drivers
+v00000219be7d9070_0 .net *"_ivl_7", 0 0, L_00000219be7d8530;  1 drivers
+v00000219be7d8fd0_0 .net *"_ivl_9", 0 0, L_00000219be7d85d0;  1 drivers
+L_00000219be7d8490 .part o00000219be7e6fd8, 0, 1;
+L_00000219be7d8a30 .part o00000219be7e7008, 0, 1;
+L_00000219be7d8530 .part o00000219be7e6fd8, 0, 1;
+L_00000219be7d85d0 .part o00000219be7e7008, 0, 1;
+L_00000219be7d8ad0 .concat8 [ 1 1 0 0], L_00000219be7b32f0, L_00000219be8cbaf0;
+L_00000219be7e30d0 .part o00000219be7e6fd8, 1, 1;
+L_00000219be7e4430 .part o00000219be7e7008, 1, 1;
+L_00000219be7e3350 .part o00000219be7e6fd8, 1, 1;
+L_00000219be7e2bd0 .part o00000219be7e7008, 1, 1;
+L_00000219be7e3710 .part o00000219be7e6fd8, 1, 1;
+L_00000219be7e3a30 .part o00000219be7e7008, 1, 1;
+    .scope S_00000219be7b2ce0;
+T_0 ;
+    %vpi_call/w 3 20 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 21 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "half_adder.sv";
