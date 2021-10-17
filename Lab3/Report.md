@@ -9,6 +9,9 @@ Registration: 2018-EE-062
     - [Instruction Memory](#instruction-memory)
     - [Program Counter](#program-counter)
     - [Immediate Generator](#immediate-generator)
+    - [ALU](#alu)
+    - [Branch and Jump Module](#branch-and-jump-module)
+    - [Data Memory](#data-memory)
   
 # Single Cycle RISC-V Processor
 For this project, we are going to implement single cycle RISC-V processor as shown in figure below.
@@ -194,13 +197,15 @@ We have the following verilog code.
 ```verilog
 module Immediate_Generator (
     output reg [31:0] Immediate_Value,
-    input [31:0] Instruction
+    input [31:0] Instruction,
+    input unsign
 );
+    assign opcode = Instruction[6:0];
     always_comb begin 
        // Using Opcode
-        case (Instruction[6:0])
+        case (opcode)
             // I Type Instruction
-            7'd3,7'd19,7'd103: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:20]};
+            7'd3,7'd19,7'd103: Immediate_Value <= unsign ? {{20'b0}, Instruction[31:20]} : {{20{Instruction[31]}}, Instruction[31:20]};
             // S Type Instruction
             7'd35: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
             // B Type Instruction
@@ -237,4 +242,137 @@ async def Imm_Gen(dut):
 We get the following output waveform.
 ![Immediate generator](Figures/Immediate_Generator.png)
 
+### ALU
+Following is the ALU's verilog code.
+```verilog
+module ALU (
+    output reg [31:0] ALU_out,
+    input [31:0] A, B,
+    input [3:0] alu_op
+);
+    always_comb begin 
+        case(alu_op)
+            0: ALU_out <= A + B;// addi
+            1: ALU_out <= A << B;// slli
+            2: ALU_out <= A ^ B;// xor
+            3: ALU_out <= A >> B;// srli
+            4: ALU_out <= A >>> B;// srai
+            5: ALU_out <= A | B;// or
+            6: ALU_out <= A & B;// and
+            7: ALU_out <= A - B;
+            8: ALU_out <= A;
+            9: ALU_out <= B;
+        default: ALU_out <= A + B;
+        endcase
+    end
+    
+endmodule
+```
+Following is the testbench code.
+```python
+@cocotb.test()
+async def alu(dut):
+    dut.al.A <= 10
+    dut.al.B <= 10
+    dut.al.alu_op <= 3
+    await Timer(2,'ns')
+    dut.al.alu_op <= 0
+    await Timer(2,'ns')
+```
+We get the following outputs for xor and add operations.
+![ALU output](Figures/ALU.png)
+
+### Branch and Jump Module
+We have the following verilog code.
+```verilog
+module Branch_Condition (
+    output reg br_taken,
+    input [31:0] A, B,
+    input [2:0] br_type
+);
+
+    always_comb begin 
+        case(br_type)
+            0: br_taken <= A == B;
+            1: br_taken <= A != B;
+            2: br_taken <= A < B;
+            3: br_taken <= A > B;
+            4: br_taken <= A <= B;
+            5: br_taken <= A >= B;
+            6: br_taken <= 1;
+        default: br_taken <= 0;
+        endcase
+    end
+    
+endmodule
+```
+We have the following testbench.
+```python
+@cocotb.test()
+async def cond(dut):
+    dut.bcond.A <= 10
+    dut.bcond.B <= 10
+    dut.bcond.br_type <= 0
+    await Timer(2,'ns')
+    dut.bcond.br_type <= 1
+    await Timer(2,'ns')
+    dut.bcond.br_type <= 6
+    await Timer(2,'ns')
+```
+We get the following output waveform.
+![Branch Condition](Figures/Branch.png)
+
+### Data Memory
+We have the following RTL.
+```verilog
+module Data_Memory (
+    output reg [31:0] rdata,
+    input [31:0] wdata, addr,
+    input wr_en, rd_en, clk, rst
+);
+
+    reg [8:0] data_mem [255:0];
+    integer i;
+
+    always @(*) begin
+        if(rd_en)
+            rdata <= {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+4]};
+    end
+
+    always @(posedge clk) begin
+        if(rst) begin
+            for(i=0;i<=255;i=i+1)
+                data_mem[i] <= 0;
+        end else begin
+            if(wr_en)
+                {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+4]} <= wdata; 
+        end
+    end
+    
+endmodule
+```
+We have the following testbench.
+```python
+@cocotb.test()
+async def Data_Test(dut):
+    clk = Clock(dut.dmem.clk,10,"ns")
+    cocotb.fork(clk.start())
+    await RisingEdge(dut.dmem.clk)
+    dut.dmem.rst <= 1
+    await RisingEdge(dut.dmem.clk)
+    dut.dmem.rst <= 0
+    await RisingEdge(dut.dmem.clk)
+    dut.dmem.addr <= 10
+    dut.dmem.wdata <= 100
+    dut.dmem.wr_en <= 1
+    await RisingEdge(dut.rf.clk)
+    dut.dmem.wr_en <= 0
+    await RisingEdge(dut.rf.clk)
+    dut.dmem.rd_en <= 1
+    await RisingEdge(dut.rf.clk)
+    dut.dmem.rd_en <= 0
+    await RisingEdge(dut.rf.clk)
+```
+We get the following output waveform.
+![DataMemory](Figures/datamem.png)
 

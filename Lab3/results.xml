@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1634476918" />
-    <testcase name="Imm_Gen" classname="test" file="/mnt/AE168BE1168BA8C3/Ubuntu/CA_LAB/Lab3/test.py" lineno="51" time="0.002131938934326172" sim_time_ns="10.001" ratio_time="4691.034925520018" />
-  </testsuite>
-</testsuites>

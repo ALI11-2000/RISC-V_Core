@@ -1,12 +1,14 @@
 module Immediate_Generator (
     output reg [31:0] Immediate_Value,
-    input [31:0] Instruction
+    input [31:0] Instruction,
+    input unsign
 );
+    assign opcode = Instruction[6:0];
     always_comb begin 
        // Using Opcode
-        case (Instruction[6:0])
+        case (opcode)
             // I Type Instruction
-            7'd3,7'd19,7'd103: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:20]};
+            7'd3,7'd19,7'd103: Immediate_Value <= unsign ? {{20'b0}, Instruction[31:20]} : {{20{Instruction[31]}}, Instruction[31:20]};
             // S Type Instruction
             7'd35: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
             // B Type Instruction
