@@ -87,5 +87,6 @@ async def Register_Test(dut):
     await RisingEdge(dut.r1.clk)
 ```
 We get the following output wavefrom.
-!()[Figures/Register.png]
+
+![Output of Register File](https://github.com/ALI11-2000/CA_LAB/blob/72a506b9feba2d6d8f3b8b293184eb2c1bc2bc80/Lab3/Figures/Register.png)
 
