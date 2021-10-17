@@ -8,6 +8,7 @@ Registration: 2018-EE-062
     - [Register File](#register-file)
     - [Instruction Memory](#instruction-memory)
     - [Program Counter](#program-counter)
+    - [Immediate Generator](#immediate-generator)
   
 # Single Cycle RISC-V Processor
 For this project, we are going to implement single cycle RISC-V processor as shown in figure below.
@@ -187,5 +188,53 @@ async def PC_Test(dut):
 ```
 We get the following output wavefrom.
 ![Program Counter output](Figures/PC.png)
+
+### Immediate Generator
+We have the following verilog code.
+```verilog
+module Immediate_Generator (
+    output reg [31:0] Immediate_Value,
+    input [31:0] Instruction
+);
+    always_comb begin 
+       // Using Opcode
+        case (Instruction[6:0])
+            // I Type Instruction
+            7'd3,7'd19,7'd103: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:20]};
+            // S Type Instruction
+            7'd35: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
+            // B Type Instruction
+            7'd99: Immediate_Value <= {{20{Instruction[31]}}, Instruction[7], Instruction[30:25], Instruction[11:8], 1'b0};
+            // J Type Instruction
+            7'd111: Immediate_Value <= {{12{Instruction[31]}}, Instruction[19:12], Instruction[20], Instruction[30:21], 1'b0};
+            // U Type Instruction
+            7'd23,7'd55: Immediate_Value <= {Instruction[31:12],12'b0};
+            default: Immediate_Value <= 0;
+        endcase
+    end
+endmodule
+```
+We have the following testbench.
+```python
+@cocotb.test()
+async def Imm_Gen(dut):
+    # addi x10,x11,21
+    dut.ig.Instruction <= 22381843
+    await Timer(2,'ns')
+    # sw x10,4(x0)
+    dut.ig.Instruction <= 10494499
+    await Timer(2,'ns')
+    # beq x0,x0,-8
+    dut.ig.Instruction <= 4261416163
+    await Timer(2,'ns')
+    # jal x0,-12
+    dut.ig.Instruction <= 4284477551
+    await Timer(2,'ns')
+    # lui x10,1234 = 5054464
+    dut.ig.Instruction <= 5055799
+    await Timer(2,'ns')
+```
+We get the following output waveform.
+![Immediate generator](Figures/Immediate_Generator.png)
 
 
