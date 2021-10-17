@@ -1,8 +1,12 @@
 `include "Register_File.sv"
+`include "Instruction_Memory.sv"
+`include "Program_Counter.sv"
 `timescale 1ns/1ns
 
-module top;
-
+module top(
+    input clk, rst
+);
+    
     wire[31:0] rdata1, rdata2;
     wire [31:0]x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31;
     input [4:0] raddr1, raddr2, waddr;
@@ -14,9 +18,11 @@ module top;
     .x28(x28), .x29(x29), .x30(x30), .x31(x31),
     .raddr1(raddr1), .raddr2(raddr2), .waddr(waddr), .wdata(wdata), .clk(clk), .rst(rst), .reg_wr(reg_wr));
 
-    wire [31:0] Instruction, Address;
+    wire [31:0] Instruction, PC, ALU_out;
 
     Instruction_Memory i1(.Instruction(Instruction), .Address(PC));
+
+    Program_Counter p1(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC));
 
     initial begin
         $dumpfile("dump.vcd");

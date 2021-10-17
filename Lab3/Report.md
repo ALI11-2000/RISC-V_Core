@@ -1,8 +1,21 @@
+Author: Ali Imran
+
+Registration: 2018-EE-062
+
+**Table of Contents**
+- [Single Cycle RISC-V Processor](#single-cycle-risc-v-processor)
+  - [Data Path](#data-path)
+    - [Register File](#register-file)
+    - [Instruction Memory](#instruction-memory)
+    - [Program Counter](#program-counter)
+  
 # Single Cycle RISC-V Processor
-
-## Register File
+For this project, we are going to implement single cycle RISC-V processor as shown in figure below.
+![Single Cycle Processor\label{abc}](Figures/ckt.png)[label:abc]
+For simulation, **cocotb** is used with **iverilog**.
+## Data Path
+### Register File
 For register file we have the following code.
-
 ```verilog
 module Register_File (
     output reg [31:0] rdata1, rdata2,
@@ -67,7 +80,7 @@ module Register_File (
     
 endmodule
 ```
-Using the following test bench.
+Using the following test bench for register file.
 ```python
 @cocotb.test()
 async def Register_Test(dut):
@@ -88,5 +101,91 @@ async def Register_Test(dut):
 ```
 We get the following output wavefrom.
 
-![Output of Register File](https://github.com/ALI11-2000/CA_LAB/blob/72a506b9feba2d6d8f3b8b293184eb2c1bc2bc80/Lab3/Figures/Register.png)
+![Output of Register File](Figures/Register.png)
+
+### Instruction Memory
+For instruction memory we have the following code.
+```verilog
+module Instruction_Memory (
+    output reg [31:0] Instruction,
+    input [31:0] Address
+);
+    reg [31:0] instruction_memory [50:0];
+    initial begin
+     $readmemh("instruction_mem.mem",instruction_memory);
+    end
+
+    always @(*) begin
+        Instruction <= instruction_memory[Address/4];
+    end
+
+    initial begin
+        $dumpfile("dump.vcd");
+        $dumpvars;
+    end
+    
+endmodule
+```
+
+The instructions are being read from **instruction_mem.mem** file with following test contents.
+```
+00b58513
+40b50533
+00b55533
+```
+
+We have the following testbench.
+```python
+@cocotb.test()
+async def Instruction_Test(dut):
+    dut.i1.Address <= 8
+    await Timer(2,'ns')
+    dut.i1.Address <= 4
+    await Timer(2,'ns')
+    dut.i1.Address <= 0
+    await Timer(2,'ns')
+```
+We get the following output wavefrom.
+
+![Output of Register File](Figures/Instruction.png)
+
+### Program Counter
+For program counter we have the following code.
+```verilog
+module Program_Counter (
+    input [31:0] ALU_out,
+    input br_taken, clk, rst,
+    output reg [31:0] PC
+);
+    always @(posedge clk ) begin
+        if(rst)
+            PC <= 0;
+        else
+            PC <= br_taken ? ALU_out : PC + 4;
+    end
+    
+endmodule
+```
+We have the following testbench.
+```python
+@cocotb.test()
+async def PC_Test(dut):
+    clk = Clock(dut.p1.clk,10,"ns")
+    cocotb.fork(clk.start())
+    await RisingEdge(dut.p1.clk)
+    dut.p1.ALU_out <= 10
+    dut.p1.br_taken <= 0
+    dut.p1.rst <= 1
+    await RisingEdge(dut.p1.clk)
+    dut.p1.rst <= 0
+    await RisingEdge(dut.p1.clk)
+    for i in range(2): await RisingEdge(dut.p1.clk)
+    dut.p1.br_taken <= 1
+    await RisingEdge(dut.p1.clk)
+    dut.p1.br_taken <= 0
+    for i in range(2): await RisingEdge(dut.p1.clk)
+```
+We get the following output wavefrom.
+![Program Counter output](Figures/PC.png)
+
 
