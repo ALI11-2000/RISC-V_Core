@@ -3,6 +3,7 @@ module Immediate_Generator (
     input [31:0] Instruction,
     input unsign
 );
+    wire [6:0] opcode;
     assign opcode = Instruction[6:0];
     always_comb begin 
        // Using Opcode

@@ -21,8 +21,9 @@ module Register_File (
     always @(*) begin
         rdata1 <= register_file[raddr1];
         rdata2 <= register_file[raddr2];
-        x1 <= register_file[0];
-        x2 <= register_file[1];
+        x0 <= register_file[0];
+        x1 <= register_file[1];
+        x2 <= register_file[2];
         x3 <= register_file[3];
         x4 <= register_file[4];
         x5 <= register_file[5];

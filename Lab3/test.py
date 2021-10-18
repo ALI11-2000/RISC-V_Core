@@ -86,7 +86,7 @@ async def cond(dut):
     dut.bcond.br_type <= 6
     await Timer(2,'ns')
 
-@cocotb.test()
+#@cocotb.test()
 async def Data_Test(dut):
     clk = Clock(dut.dmem.clk,10,"ns")
     cocotb.fork(clk.start())
@@ -105,3 +105,14 @@ async def Data_Test(dut):
     await RisingEdge(dut.rf.clk)
     dut.dmem.rd_en <= 0
     await RisingEdge(dut.rf.clk)
+
+@cocotb.test()
+async def gcd_Test(dut):
+    clk = Clock(dut.clk,10,"ns")
+    cocotb.fork(clk.start())
+    await RisingEdge(dut.clk)
+    dut.rst <= 1
+    await RisingEdge(dut.clk)
+    dut.rst <= 0
+    for i in range(2): await RisingEdge(dut.clk)
+    while(int(dut.PC) != 88): await RisingEdge(dut.clk)
