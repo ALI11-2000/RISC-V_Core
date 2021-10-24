@@ -112,7 +112,15 @@ async def gcd_Test(dut):
     cocotb.fork(clk.start())
     await RisingEdge(dut.clk)
     dut.rst <= 1
+    dut.num1 <= 30
+    dut.num2 <= 15
     await RisingEdge(dut.clk)
     dut.rst <= 0
+    await RisingEdge(dut.clk)
+    await RisingEdge(dut.clk)
+    dut.hard_write <= 1
+    await RisingEdge(dut.clk)
+    dut.hard_write <= 0
     for i in range(2): await RisingEdge(dut.clk)
     while(int(dut.PC) != 88): await RisingEdge(dut.clk)
+    for i in range(100): await RisingEdge(dut.clk)

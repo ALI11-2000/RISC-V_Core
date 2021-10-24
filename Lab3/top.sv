@@ -12,7 +12,7 @@ module top(
     input clk, rst
 );
     
-    wire[31:0] rdata1, rdata2;
+    wire[31:0] rdata1, rdata2, num1, num2, result;
     wire [31:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31;
     wire [4:0] raddr1, raddr2, waddr;
     reg [31:0] wdata;
@@ -31,7 +31,7 @@ module top(
 
     Instruction_Memory im(.Instruction(Instruction), .Address(PC));
 
-    Program_Counter pc(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC));
+    Program_Counter pc(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC), .hard_write(hard_write));
 
     Immediate_Generator ig(.Immediate_Value(Immediate_Value), .Instruction(Instruction), .unsign(unsign));
 
@@ -45,7 +45,8 @@ module top(
 
     Branch_Condition bcond(.br_taken(br_taken), .A(rdata1), .B(rdata2), .br_type(br_type));
 
-    Data_Memory dmem(.rdata(rdata), .wdata(rdata2), .addr(ALU_out),
+    Data_Memory dmem(.num1(num1), .num2(num2), .result(result), .hard_write(hard_write),
+                     .rdata(rdata), .wdata(rdata2), .addr(ALU_out),
                      .wr_en(wr_en), .rd_en(rd_en), .clk(clk), .rst(rst));
 
 
