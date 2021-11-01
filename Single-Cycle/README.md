@@ -126,18 +126,18 @@ For testing the gcd code, following assembly has been created.
     lw x8, 0(x0)
     lw x9, 4(x0)
 gcd:
-	beq x8, x9, stop
+    beq x8, x9, stop
     blt x8, x9, less
     sub s8, s8, x9
     j gcd
 less:
-	sub x9, x9, x8
+    sub x9, x9, x8
     j gcd
 stop:
-	sw x8,8(x0)
+    sw x8,8(x0)
     lw x10,8(x0)
 end:
-	j end
+    j end
  ```
 For the above assembly, we have the following machine code in the **instruction_mem.mem**.
 ```machine
