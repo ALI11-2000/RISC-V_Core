@@ -123,59 +123,35 @@ endmodule
 ```
 For testing the gcd code, following assembly has been created.
 ```assembly
-    addi a0,a0,15
-    addi a1,a1,30 
-    addi a2,a2,0        #done=0 
-    addi a3,a3,0        #constant =0 
-    addi a4,a4,1        #msb_check=1 
-    addi a5,a5,31 
-.loop: 
-    bne a2,a3,.abc      #while(done !=0) 
-    sub a7,a0,a1        #a-b 
-    srl a7,a7,a5        #checking msb 
-    xor a7,a7,a4        #checking if msb 1 or 0 
-    bne a7,a3,.else     #if true then a is not < b 
-    add a6,a3,a0        #temp=A 
-    add a0,a3,a1        #A=B 
-    add a1,a3,a6        #B=A 
-    beq a3,a3,.loop     #go back to loop 
-.else: 
-    bne a1,a3,.elseif   #else if B !=0 
-    addi a2,a2,1        #else done=1 
-    beq a3,a3,.loop     #go back to loop 
-.elseif: 
-    sub a0,a0,a1        #A=A-B 
-    beq a3,a3,.loop     #go back to loop 
-.abc: 
-    add a7,a3,a0 
-    sw a7,0(x0)
-    lw x18,0(x0)
+	lw x8, 0(x0)
+    lw x9, 4(x0)
+gcd:
+	beq x8, x9, stop
+    blt x8, x9, less
+    sub s8, s8, x9
+    j gcd
+less:
+	sub x9, x9, x8
+    j gcd
+stop:
+	sw x8,8(x0)
+    lw x10,8(x0)
+end:
+	j end
  ```
 For the above assembly, we have the following machine code in the **instruction_mem.mem**.
 ```machine
-00f50513
-01e58593
-00060613
-00068693
-00170713
-01f78793
-02d61c63
-40b508b3
-00f8d8b3
-00e8c8b3
-00d89a63
-00a68833
-00b68533
-010685b3
-fed680e3
-00d59663
-00160613
-fcd68ae3
-40b50533
-fcd686e3
-00a688b3
-01102023
-00002903
+00002403
+00402483
+00940c63
+00944663
+409c0c33
+ff5ff06f
+408484b3
+fedff06f
+00802423
+00802503
+0000006f
 ```
 For the top module, we have the following testbench.
 ```python

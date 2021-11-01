@@ -9,7 +9,7 @@ module Immediate_Generator (
        // Using Opcode
         case (opcode)
             // I Type Instruction
-            7'd3,7'd19,7'd103: Immediate_Value <= unsign ? {{20'b0}, Instruction[31:20]} : {{20{Instruction[31]}}, Instruction[31:20]};
+            7'd3,7'd19,7'd103: Immediate_Value <= unsign ? {{27'b0}, Instruction[24:20]} : {{20{Instruction[31]}}, Instruction[31:20]};
             // S Type Instruction
             7'd35: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
             // B Type Instruction

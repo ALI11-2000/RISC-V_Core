@@ -123,3 +123,17 @@ async def gcd_Test(dut):
     dut.hard_write.value = 0
     for i in range(2): await RisingEdge(dut.clk)
     while(int(dut.PC) != 40): await RisingEdge(dut.clk)
+    
+    await RisingEdge(dut.clk)
+    dut.rst.value = 1
+    dut.num1.value = 15
+    dut.num2.value = 30
+    await RisingEdge(dut.clk)
+    dut.rst.value = 0
+    await RisingEdge(dut.clk)
+    await RisingEdge(dut.clk)
+    dut.hard_write.value = 1
+    await RisingEdge(dut.clk)
+    dut.hard_write.value = 0
+    for i in range(2): await RisingEdge(dut.clk)
+    while(int(dut.PC) != 40): await RisingEdge(dut.clk)
