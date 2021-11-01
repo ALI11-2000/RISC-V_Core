@@ -123,7 +123,7 @@ endmodule
 ```
 For testing the gcd code, following assembly has been created.
 ```assembly
-	lw x8, 0(x0)
+    lw x8, 0(x0)
     lw x9, 4(x0)
 gcd:
 	beq x8, x9, stop
