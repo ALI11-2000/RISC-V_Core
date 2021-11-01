@@ -1,7 +1,7 @@
 TOPLEVEL_LANG ?= verilog
 PWD = $(shell pwd)
 export PYTHONPATH := $(PWD):$(PYTHONPATH)
-VERILOG_SOURCES = top.sv
+VERILOG_SOURCES = $(PWD)/../srcs/top.sv
 TOPLEVEL := top
 MODULE := test
 include $(shell cocotb-config --makefiles)/Makefile.sim

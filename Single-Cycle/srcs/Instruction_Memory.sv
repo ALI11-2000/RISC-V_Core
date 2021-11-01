@@ -4,7 +4,7 @@ module Instruction_Memory (
 );
     reg [31:0] instruction_memory [50:0];
     initial begin
-     $readmemh("instruction_mem.mem",instruction_memory);
+     $readmemh("../srcs/instruction_mem.mem",instruction_memory);
     end
 
     always @(*) begin

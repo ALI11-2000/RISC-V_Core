@@ -17,31 +17,33 @@ Registration: 2018-EE-062
 
 **File Structure**
 
-We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. All the results are in the Figures directory.
+We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. All the results are in the Figures directory. In order to run the simulation, [cocotb](https://github.com/cocotb/cocotb) is required to be installed. Run the simulation by running ```make``` command in the **tests** folder in terminal. 
 ```bash
-├── ALU.sv
-├── Branch_Condition.sv
-├── Controller.sv
-├── Data_Memory.sv
 ├── Figures
-│   ├── ALU.png
-│   ├── Branch.png
-│   ├── ckt.png
-│   ├── datamem.png
-│   ├── gcd.png
-│   ├── Immediate_Generator.png
-│   ├── Instruction.png
-│   ├── PC.png
-│   └── Register.png
-├── Immediate_Generator.sv
-├── instruction_mem.mem
-├── Instruction_Memory.sv
-├── Makefile
-├── Program_Counter.sv
-├── Register_File.sv
-├── Report.md
-├── test.py
-└── top.sv
+│   ├── ALU.png
+│   ├── Branch.png
+│   ├── Immediate_Generator.png
+│   ├── Instruction.png
+│   ├── PC.png
+│   ├── Register.png
+│   ├── ckt.png
+│   ├── datamem.png
+│   └── gcd.png
+├── README.md
+├── srcs
+│   ├── ALU.sv
+│   ├── Branch_Condition.sv
+│   ├── Controller.sv
+│   ├── Data_Memory.sv
+│   ├── Immediate_Generator.sv
+│   ├── Instruction_Memory.sv
+│   ├── Program_Counter.sv
+│   ├── Register_File.sv
+│   ├── instruction_mem.mem
+│   └── top.sv
+└── tests
+    ├── Makefile
+    └── test.py
 ```
 
 # Single Cycle RISC-V Processor

@@ -1,11 +1,11 @@
-`include "Register_File.sv"
-`include "Instruction_Memory.sv"
-`include "Program_Counter.sv"
-`include "Immediate_Generator.sv"
-`include "ALU.sv"
-`include "Branch_Condition.sv"
-`include "Data_Memory.sv"
-`include "Controller.sv"
+`include "../srcs/Register_File.sv"
+`include "../srcs/Instruction_Memory.sv"
+`include "../srcs/Program_Counter.sv"
+`include "../srcs/Immediate_Generator.sv"
+`include "../srcs/ALU.sv"
+`include "../srcs/Branch_Condition.sv"
+`include "../srcs/Data_Memory.sv"
+`include "../srcs/Controller.sv"
 `timescale 1ns/1ns
 
 module top(
