@@ -10,25 +10,25 @@ async def Register_Test(dut):
     clk = Clock(dut.rf.clk,10,"ns")
     cocotb.fork(clk.start())
     await RisingEdge(dut.rf.clk)
-    dut.rf.rst <= 1
+    dut.rf.rst.value = 1
     await RisingEdge(dut.rf.clk)
-    dut.rf.rst <= 0
+    dut.rf.rst.value = 0
     await RisingEdge(dut.rf.clk)
-    dut.rf.raddrf <= 5
-    dut.rf.reg_wr <= 1
-    dut.rf.waddr <= 5
-    dut.rf.wdata <= 10
+    dut.rf.raddrf.value = 5
+    dut.rf.reg_wr.value = 1
+    dut.rf.waddr.value = 5
+    dut.rf.wdata.value = 10
     await RisingEdge(dut.rf.clk)
-    dut.rf.reg_wr <= 0
+    dut.rf.reg_wr.value = 0
     await RisingEdge(dut.rf.clk)
 
 #@cocotb.test()
 async def Instruction_Test(dut):
-    dut.im.Address <= 8
+    dut.im.Address.value = 8
     await Timer(2,'ns')
-    dut.im.Address <= 4
+    dut.im.Address.value = 4
     await Timer(2,'ns')
-    dut.im.Address <= 0
+    dut.im.Address.value = 0
     await Timer(2,'ns')
 
 #@cocotb.test()
@@ -36,54 +36,54 @@ async def PC_Test(dut):
     clk = Clock(dut.pc.clk,10,"ns")
     cocotb.fork(clk.start())
     await RisingEdge(dut.pc.clk)
-    dut.pc.ALU_out <= 10
-    dut.pc.br_taken <= 0
-    dut.pc.rst <= 1
+    dut.pc.ALU_out.value = 10
+    dut.pc.br_taken.value = 0
+    dut.pc.rst.value = 1
     await RisingEdge(dut.pc.clk)
-    dut.pc.rst <= 0
+    dut.pc.rst.value = 0
     await RisingEdge(dut.pc.clk)
     for i in range(2): await RisingEdge(dut.pc.clk)
-    dut.pc.br_taken <= 1
+    dut.pc.br_taken.value = 1
     await RisingEdge(dut.pc.clk)
-    dut.pc.br_taken <= 0
+    dut.pc.br_taken.value = 0
     for i in range(2): await RisingEdge(dut.pc.clk)
 
 #@cocotb.test()
 async def Imm_Gen(dut):
     # addi x10,x11,21
-    dut.ig.Instruction <= 22381843
+    dut.ig.Instruction.value = 22381843
     await Timer(2,'ns')
     # sw x10,4(x0)
-    dut.ig.Instruction <= 10494499
+    dut.ig.Instruction.value = 10494499
     await Timer(2,'ns')
     # beq x0,x0,-8
-    dut.ig.Instruction <= 4261416163
+    dut.ig.Instruction.value = 4261416163
     await Timer(2,'ns')
     # jal x0,-12
-    dut.ig.Instruction <= 4284477551
+    dut.ig.Instruction.value = 4284477551
     await Timer(2,'ns')
     # lui x10,1234 = 5054464
-    dut.ig.Instruction <= 5055799
+    dut.ig.Instruction.value = 5055799
     await Timer(2,'ns')
 
 #@cocotb.test()
 async def alu(dut):
-    dut.al.A <= 10
-    dut.al.B <= 10
-    dut.al.alu_op <= 3
+    dut.al.A.value = 10
+    dut.al.B.value = 10
+    dut.al.alu_op.value = 3
     await Timer(2,'ns')
-    dut.al.alu_op <= 0
+    dut.al.alu_op.value = 0
     await Timer(2,'ns')
 
 #@cocotb.test()
 async def cond(dut):
-    dut.bcond.A <= 10
-    dut.bcond.B <= 10
-    dut.bcond.br_type <= 0
+    dut.bcond.A.value = 10
+    dut.bcond.B.value = 10
+    dut.bcond.br_type.value = 0
     await Timer(2,'ns')
-    dut.bcond.br_type <= 1
+    dut.bcond.br_type.value = 1
     await Timer(2,'ns')
-    dut.bcond.br_type <= 6
+    dut.bcond.br_type.value = 6
     await Timer(2,'ns')
 
 #@cocotb.test()
@@ -91,19 +91,19 @@ async def Data_Test(dut):
     clk = Clock(dut.dmem.clk,10,"ns")
     cocotb.fork(clk.start())
     await RisingEdge(dut.dmem.clk)
-    dut.dmem.rst <= 1
+    dut.dmem.rst.value = 1
     await RisingEdge(dut.dmem.clk)
-    dut.dmem.rst <= 0
+    dut.dmem.rst.value = 0
     await RisingEdge(dut.dmem.clk)
-    dut.dmem.addr <= 10
-    dut.dmem.wdata <= 100
-    dut.dmem.wr_en <= 1
+    dut.dmem.addr.value = 10
+    dut.dmem.wdata.value = 100
+    dut.dmem.wr_en.value = 1
     await RisingEdge(dut.rf.clk)
-    dut.dmem.wr_en <= 0
+    dut.dmem.wr_en.value = 0
     await RisingEdge(dut.rf.clk)
-    dut.dmem.rd_en <= 1
+    dut.dmem.rd_en.value = 1
     await RisingEdge(dut.rf.clk)
-    dut.dmem.rd_en <= 0
+    dut.dmem.rd_en.value = 0
     await RisingEdge(dut.rf.clk)
 
 @cocotb.test()
@@ -111,16 +111,15 @@ async def gcd_Test(dut):
     clk = Clock(dut.clk,10,"ns")
     cocotb.fork(clk.start())
     await RisingEdge(dut.clk)
-    dut.rst <= 1
-    dut.num1 <= 30
-    dut.num2 <= 15
+    dut.rst.value = 1
+    dut.num1.value = 2
+    dut.num2.value = 4
     await RisingEdge(dut.clk)
-    dut.rst <= 0
+    dut.rst.value = 0
     await RisingEdge(dut.clk)
     await RisingEdge(dut.clk)
-    dut.hard_write <= 1
+    dut.hard_write.value = 1
     await RisingEdge(dut.clk)
-    dut.hard_write <= 0
+    dut.hard_write.value = 0
     for i in range(2): await RisingEdge(dut.clk)
-    while(int(dut.PC) != 88): await RisingEdge(dut.clk)
-    for i in range(100): await RisingEdge(dut.clk)
+    while(int(dut.PC) != 40): await RisingEdge(dut.clk)

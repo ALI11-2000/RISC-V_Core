@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1635089612" />
-    <testcase name="gcd_Test" classname="test" file="/home/ali11-2000/FYP/CA_LAB/Lab3/test.py" lineno="109" time="0.03144097328186035" sim_time_ns="1470.001" ratio_time="46754.30963354136" />
+    <property name="random_seed" value="1635750603" />
+    <testcase name="gcd_Test" classname="test" file="/home/ali11-2000/FYP/CA_LAB/Lab3/test.py" lineno="109" time="0.006906986236572266" sim_time_ns="140.001" ratio_time="20269.477193786675" />
   </testsuite>
 </testsuites>

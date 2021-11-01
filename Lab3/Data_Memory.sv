@@ -12,6 +12,10 @@ module Data_Memory (
     always @(*) begin
         if(rd_en)
             rdata <= {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+3]};
+        if(hard_write)
+            {data_mem[0],data_mem[0+1],data_mem[0+2],data_mem[0+3]} <= num1;
+            {data_mem[4],data_mem[4+1],data_mem[4+2],data_mem[4+3]} <= num2;
+            
         a1 <= {data_mem[0],data_mem[0+1],data_mem[0+2],data_mem[0+3]};
         a2 <= {data_mem[4],data_mem[4+1],data_mem[4+2],data_mem[4+3]};
     end
@@ -25,8 +29,6 @@ module Data_Memory (
             for(i=0;i<=255;i=i+1) begin
                 data_mem[i] <= 0;
             end
-            {data_mem[0],data_mem[0+1],data_mem[0+2],data_mem[0+3]} <= num1;
-            {data_mem[4],data_mem[4+1],data_mem[4+2],data_mem[4+3]} <= num2;
         end else begin
             if(wr_en)
                 {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+3]} <= wdata; 
