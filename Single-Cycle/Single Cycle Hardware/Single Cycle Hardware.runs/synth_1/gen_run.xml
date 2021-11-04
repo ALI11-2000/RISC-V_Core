@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1636016871">
+  <File Type="PA-TCL" Name="top_hardware.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_hardware_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_hardware_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_hardware.vds"/>
+  <File Type="RDS-UTIL" Name="top_hardware_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_hardware_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_hardware.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_hardware_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_hardware_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/ALU.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/ALU.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Branch_Condition.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Branch_Condition.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Clock_divider.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Controller.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Data_Memory.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Data_Memory.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Immediate_Generator.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Immediate_Generator.sv"/>
+        <Attr Name="ImportTime" Val="1635751991"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Instruction_Memory.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Instruction_Memory.sv"/>
+        <Attr Name="ImportTime" Val="1635777361"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Program_Counter.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Program_Counter.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Register_File.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Register_File.sv"/>
+        <Attr Name="ImportTime" Val="1635700736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/top.sv"/>
+        <Attr Name="ImportTime" Val="1635854952"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_hardware.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/instruction_mem.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/instruction_mem.mem"/>
+        <Attr Name="ImportTime" Val="1635752734"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top_hardware"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/PROCESSOR.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/PROCESSOR.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

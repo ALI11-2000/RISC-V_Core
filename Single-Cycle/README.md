@@ -130,7 +130,7 @@ For testing the gcd code, following assembly has been created.
 gcd:
     beq x8, x9, stop
     blt x8, x9, less
-    sub s8, s8, x9
+    sub x8, x8, x9
     j gcd
 less:
     sub x9, x9, x8

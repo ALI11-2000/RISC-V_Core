@@ -1,0 +1,333 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Nov  4 14:13:42 2021
+| Host         : LAPTOP-1GJRHT52 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_hardware_control_sets_placed.rpt
+| Design       : top_hardware
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   266 |
+| Unused register locations in slices containing registers |  1540 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            2 |
+|     10 |            2 |
+|    16+ |          261 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              84 |           36 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             184 |           24 |
+| Yes          | No                    | No                     |              20 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            4716 |         1393 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------+---------------------+------------------+----------------+
+|  Clock Signal  |           Enable Signal           |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------+---------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                   |                     |                2 |              4 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[3][4]_0        | rst_IBUF            |                1 |              8 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[7][4]_0        | rst_IBUF            |                1 |              8 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[7][4]_0        |                     |                2 |             10 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[3][4]_0        |                     |                3 |             10 |
+|  clk_new_BUFG  |                                   |                     |                2 |             16 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[92][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[99][0][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[94][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[4][8]_0        | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[0][8]_0        | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[2][8]_0        | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[1][8]_0        | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[5][8]_0        | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[6][8]_0        | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[95][0][0]      | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[114][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[115][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[116][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[109][8][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[117][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[107][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[112][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[113][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[102][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[101][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[10][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[106][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[100][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[108][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[103][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[105][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[110][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[111][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[104][8][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[123][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[11][0][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[122][8]_0[0]   | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[118][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[121][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[124][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[125][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[120][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[126][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[127][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[119][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[128][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[139][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[132][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[131][0][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[129][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[12][8]_0[0]    | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[141][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[140][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[136][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[138][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[13][8]_0[0]    | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[130][8]_0[0]   | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[135][0][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[137][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[134][8]_0[0]   | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[133][8][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[155][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[157][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[145][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[148][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[146][8]_0[0]   | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[14][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[151][0][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[152][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[147][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[150][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[144][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[143][0][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[153][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[149][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[142][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[154][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[156][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[163][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[165][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[167][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[169][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[159][0][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[170][8]_0[0]   | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[171][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[162][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[168][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[161][8][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[164][8][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[166][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[158][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[160][8][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[16][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[172][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[173][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[15][0][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[176][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[181][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[182][8]_0[0]   | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[189][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[174][8]_0[0]   | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[17][8][0]      | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[184][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[183][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[179][0][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[175][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[186][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[187][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[178][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[185][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[180][8][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[188][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[177][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[192][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[201][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[205][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[190][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[199][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[18][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[197][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[206][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[198][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[19][0][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[193][8][0]     | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[196][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[194][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[191][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[200][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[195][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[202][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[203][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[204][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[219][0][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[215][0][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[216][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[222][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[225][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[218][8]_0[0]   | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[21][8][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[212][8][0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[214][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[224][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[209][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[213][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[210][8]_0[0]   | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[211][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[208][8][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[217][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[220][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[221][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[20][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[223][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[207][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[240][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[226][8]_0[0]   | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[229][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[228][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[23][0][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[237][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[236][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[238][8]_0[0]   | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[227][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[235][0][0]     | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[230][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[232][8][0]     | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[233][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[234][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[241][8][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[22][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[231][0][0]     | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[239][0][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[252][8][0]     | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[253][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[244][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[250][8]_0[0]   | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[246][8]_0[0]   | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[242][8]_0[0]   | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[254][8]_0[0]   | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[247][0][0]     | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[255][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[24][8]_1[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[25][8][0]      | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[251][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[248][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[243][0][0]     | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[245][8][0]     | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[249][8][0]     | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[38][8]_0[0]    | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[39][0][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[29][8][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[35][0][0]      | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[26][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[28][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[32][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[34][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[30][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[31][0][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[33][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[27][0][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[36][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[37][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[55][0][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[56][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[57][8][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[50][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[45][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[44][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[41][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[54][8]_0[0]    | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[43][0][0]      | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[42][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[48][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[40][8][0]      | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[49][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[46][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[47][0][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[51][0][0]      | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[52][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[53][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[61][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[68][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[60][8][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[70][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[62][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[71][0][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[64][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[67][0][0]      | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[72][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[73][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[69][8][0]      | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[59][0][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[58][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[65][8]_0[0]    | rst_IBUF            |                2 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[63][0][0]      | rst_IBUF            |                6 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[66][8]_0[0]    | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[77][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[82][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[80][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[75][0][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[81][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[86][8]_0[0]    | rst_IBUF            |                3 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[76][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[79][0][0]      | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[85][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[83][0][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[78][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[74][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[84][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[87][0][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[88][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[89][8][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[8][8][0]       | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[9][8]_0[0]     | rst_IBUF            |                9 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[97][8][0]      | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[90][8]_0[0]    | rst_IBUF            |                4 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[96][8][0]      | rst_IBUF            |                5 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[93][8][0]      | rst_IBUF            |                7 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[91][0][0]      | rst_IBUF            |                8 |             18 |
+|  clk_new_BUFG  | t1/pc/data_mem_reg[98][8]_0[0]    | rst_IBUF            |                8 |             18 |
+|  clk_IBUF_BUFG |                                   | dut/clear           |                7 |             56 |
+|  clk_IBUF_BUFG |                                   | counter[0]_i_1_n_0  |                8 |             64 |
+|  clk_new_BUFG  |                                   | t1/pc/PC[0]_i_1_n_0 |                9 |             64 |
+|  clk_new_BUFG  | t1/pc/E[0]                        | rst_IBUF            |               22 |             64 |
+|  clk_new_BUFG  | t1/pc/register_file_reg[8][31][0] | rst_IBUF            |               25 |             64 |
+|  rd_en         |                                   |                     |               32 |             64 |
++----------------+-----------------------------------+---------------------+------------------+----------------+
+
+

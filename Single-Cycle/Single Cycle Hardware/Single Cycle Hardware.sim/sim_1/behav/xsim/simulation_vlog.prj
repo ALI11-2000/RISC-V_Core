@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" \
+"../../../../Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" \
+"../../../../Single Cycle Hardware.srcs/sim_1/new/simulation.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

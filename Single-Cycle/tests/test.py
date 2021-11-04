@@ -126,8 +126,8 @@ async def gcd_Test(dut):
     
     await RisingEdge(dut.clk)
     dut.rst.value = 1
-    dut.num1.value = 15
-    dut.num2.value = 30
+    dut.num1.value = 30
+    dut.num2.value = 15
     await RisingEdge(dut.clk)
     dut.rst.value = 0
     await RisingEdge(dut.clk)

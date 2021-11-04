@@ -1,0 +1,26 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open vcd file dump.vcd. A VCD file by name dump.vcd has already been opened. Only one VCD file is allowed to be open.
+ERROR: Could not open vcd file dump.vcd. A VCD file by name dump.vcd has already been opened. Only one VCD file is allowed to be open.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44

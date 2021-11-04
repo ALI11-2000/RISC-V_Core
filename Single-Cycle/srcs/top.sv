@@ -9,10 +9,12 @@
 `timescale 1ns/1ns
 
 module top(
-    input clk, rst
+    input [31:0] num1, num2, 
+    input clk, rst, hard_write,
+    output [31:0] result
 );
     
-    wire[31:0] rdata1, rdata2, num1, num2, result;
+    wire[31:0] rdata1, rdata2;
     wire [31:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31;
     wire [4:0] raddr1, raddr2, waddr;
     reg [31:0] wdata;
