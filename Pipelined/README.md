@@ -34,7 +34,8 @@ We have the following file structure. All the test are written in the **test.py*
 
 # Pipelined RISC-V Processor
 ## Phase 1
-For the first phase of this project, we are going to  converting our [Single Cycle Processor](../Single-Cycle) as to the pipelined version as shown in figure below.
+For the first phase of this project, we are going to  converting our [Single Cycle Processor](../Single-Cycle) to the pipelined version as shown in figure below.
+
 ![Pipelined Processor\label{abc}](Figures/ckt.png)
 For simulation, **cocotb** is used with **iverilog**.
 
@@ -47,7 +48,7 @@ For the five stages of the pipeline the four registers have been added which wil
 
 Following assembly code has been added in the [instruction_mem.mem](srcs/instruction_mem.mem) file to test the first phase of the pipeline.
 ```assembly
-	addi x10,x0,10
+    addi x10,x0,10
     addi x11,x0,11
     addi x12,x0,12
     addi x13,x0,13
