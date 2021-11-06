@@ -106,7 +106,6 @@ async def gcd_Test(dut):
     dut.hard_write.value = 0
     for i in range(2): await RisingEdge(dut.clk)
     while(int(dut.PC) != 40): await RisingEdge(dut.clk)
-    
     await RisingEdge(dut.clk)
     dut.rst.value = 1
     dut.num1.value = 15
@@ -125,71 +124,8 @@ For the gcd code, we get the following results.
 ![GCD](Figures/gcd.png)
 ## Data Path
 ### Register File
-For register file we have the following code.
-```verilog
-module Register_File (
-    output reg [31:0] rdata1, rdata2,
-    output reg [31:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,
-    input [4:0] raddr1, raddr2, waddr,
-    input [31:0] wdata,
-    input clk, rst, reg_wr
-);
-    integer i;
-    reg [31:0] register_file [31:0];
-    always @(posedge clk ) begin
-        if(rst) begin
-            for (i = 0; i <= 31; i=i+1) begin
-                register_file[i] <= 0;
-            end
-        end else if(reg_wr) begin
-            if(waddr != 0)
-                register_file[waddr] <= wdata;
-        end 
-    end
+For [register file](srcs/Register_File.sv), the data available at two specified addresses(```raddr1``` and ```addr2```) will be available at the output(```rdata1``` and ```rdata2```). And data(```wdata```) will be written at the specified address(```waddr```) when the register write control signal(```reg_wr```) is set. The 31 general purpose registers have been declared as the output for debugging purposes.
 
-    always @(*) begin
-        rdata1 <= register_file[raddr1];
-        rdata2 <= register_file[raddr2];
-        x1 <= register_file[0];
-        x2 <= register_file[1];
-        x3 <= register_file[3];
-        x4 <= register_file[4];
-        x5 <= register_file[5];
-        x6 <= register_file[6];
-        x7 <= register_file[7];
-        x8 <= register_file[8];
-        x9 <= register_file[9];
-        x10 <= register_file[10];
-        x11 <= register_file[11];
-        x12 <= register_file[12];
-        x13 <= register_file[13];
-        x14 <= register_file[14];
-        x15 <= register_file[15];
-        x16 <= register_file[16];
-        x17 <= register_file[17];
-        x18 <= register_file[18];
-        x19 <= register_file[19];
-        x20 <= register_file[20];
-        x21 <= register_file[21];
-        x22 <= register_file[22];
-        x23 <= register_file[23];
-        x24 <= register_file[24];
-        x25 <= register_file[25];
-        x26 <= register_file[26];
-        x27 <= register_file[27];
-        x28 <= register_file[28];
-        x29 <= register_file[29];
-        x30 <= register_file[30];
-        x31 <= register_file[31];
-    end
-
-    initial begin
-        $dumpfile("dump.vcd");
-        $dumpvars;
-    end
-    
-endmodule
-```
 Using the following test bench for register file.
 ```python
 @cocotb.test()
@@ -214,28 +150,7 @@ We get the following output waveform.
 ![Output of Register File](Figures/Register.png)
 
 ### Instruction Memory
-For instruction memory we have the following code.
-```verilog
-module Instruction_Memory (
-    output reg [31:0] Instruction,
-    input [31:0] Address
-);
-    reg [31:0] instruction_memory [50:0];
-    initial begin
-     $readmemh("instruction_mem.mem",instruction_memory);
-    end
-
-    always @(*) begin
-        Instruction <= instruction_memory[Address/4];
-    end
-
-    initial begin
-        $dumpfile("dump.vcd");
-        $dumpvars;
-    end
-    
-endmodule
-```
+The [instruction memory](srcs/Instruction_Memory.sv) will read instructions from the [instruction_mem.mem](srcs/instruction_mem.mem) file. And the output(```Instruction```) will be available based on the instruction's address which is the input(```Address```).
 
 The instructions are being read from **instruction_mem.mem** file with following test contents.
 ```
@@ -260,22 +175,8 @@ We get the following output waveform.
 ![Output of Register File](Figures/Instruction.png)
 
 ### Program Counter
-For program counter we have the following code.
-```verilog
-module Program_Counter (
-    input [31:0] ALU_out,
-    input br_taken, clk, rst,
-    output reg [31:0] PC
-);
-    always @(posedge clk ) begin
-        if(rst)
-            PC <= 0;
-        else
-            PC <= br_taken ? ALU_out : PC + 4;
-    end
-    
-endmodule
-```
+The [program counter](srcs/Program_Counter.sv) will provide the address(```PC```) of the instruction to be executed and the next value of the program counter will depend on the ```br_taken``` flag which decides whether the next instruction will be executed or we will jump to some other instruction.
+
 We have the following testbench.
 ```python
 @cocotb.test()
@@ -299,33 +200,8 @@ We get the following output waveform.
 ![Program Counter output](Figures/PC.png)
 
 ### Immediate Generator
-We have the following verilog code.
-```verilog
-module Immediate_Generator (
-    output reg [31:0] Immediate_Value,
-    input [31:0] Instruction,
-    input unsign
-);
-    wire [6:0] opcode;
-    assign opcode = Instruction[6:0];
-    always_comb begin 
-       // Using Opcode
-        case (opcode)
-            // I Type Instruction
-            7'd3,7'd19,7'd103: Immediate_Value <= unsign ? {{20'b0}, Instruction[31:20]} : {{20{Instruction[31]}}, Instruction[31:20]};
-            // S Type Instruction
-            7'd35: Immediate_Value <= {{20{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
-            // B Type Instruction
-            7'd99: Immediate_Value <= {{20{Instruction[31]}}, Instruction[7], Instruction[30:25], Instruction[11:8], 1'b0};
-            // J Type Instruction
-            7'd111: Immediate_Value <= {{12{Instruction[31]}}, Instruction[19:12], Instruction[20], Instruction[30:21], 1'b0};
-            // U Type Instruction
-            7'd23,7'd55: Immediate_Value <= {Instruction[31:12],12'b0};
-            default: Immediate_Value <= 0;
-        endcase
-    end
-endmodule
-```
+The [Immediate Generator](srcs/Immediate_Generator.sv) will generate the ```Immediate Value``` based on the type of ```Instruction```.
+
 We have the following testbench.
 ```python
 @cocotb.test()
@@ -350,31 +226,8 @@ We get the following output waveform.
 ![Immediate generator](Figures/Immediate_Generator.png)
 
 ### ALU
-Following is the ALU's verilog code.
-```verilog
-module ALU (
-    output reg [31:0] ALU_out,
-    input [31:0] A, B,
-    input [3:0] alu_op
-);
-    always_comb begin 
-        case(alu_op)
-            0: ALU_out <= A + B;// addi
-            1: ALU_out <= A << B;// slli
-            2: ALU_out <= A ^ B;// xor
-            3: ALU_out <= A >> B;// srli
-            4: ALU_out <= A >>> B;// srai
-            5: ALU_out <= A | B;// or
-            6: ALU_out <= A & B;// and
-            7: ALU_out <= A - B;
-            8: ALU_out <= A;
-            9: ALU_out <= B;
-        default: ALU_out <= A + B;
-        endcase
-    end
-    
-endmodule
-```
+The [ALU](srcs/ALU.sv) will perform different operations on the two inputs(```A``` and ```B```) based on the control signal(`alu_op`).
+
 Following is the testbench code.
 ```python
 @cocotb.test()
@@ -390,29 +243,8 @@ We get the following outputs for xor and add operations.
 ![ALU output](Figures/ALU.png)
 
 ### Branch and Jump Module
-We have the following verilog code.
-```verilog
-module Branch_Condition (
-    output reg br_taken,
-    input [31:0] A, B,
-    input [2:0] br_type
-);
+The [Branch_Condition](srcs/Branch_Condition.sv) module performs different comparisons for the B-type based on the `br_type` control signal to generate the control signal(`br_taken`) for the B-type and J-type instructions which will be the input to the [Program_Counter](#program-counter) module.
 
-    always_comb begin 
-        case(br_type)
-            0: br_taken <= A == B;
-            1: br_taken <= A != B;
-            2: br_taken <= A < B;
-            3: br_taken <= A > B;
-            4: br_taken <= A <= B;
-            5: br_taken <= A >= B;
-            6: br_taken <= 1;
-        default: br_taken <= 0;
-        endcase
-    end
-    
-endmodule
-```
 We have the following testbench.
 ```python
 @cocotb.test()
@@ -430,34 +262,8 @@ We get the following output waveform.
 ![Branch Condition](Figures/Branch.png)
 
 ### Data Memory
-We have the following RTL.
-```verilog
-module Data_Memory (
-    output reg [31:0] rdata,
-    input [31:0] wdata, addr,
-    input wr_en, rd_en, clk, rst
-);
+The [Data_Memory](srcs/Data_Memory.sv) module creates the data memory from which data can be accessed or can be written onto based on the control signals(`wr_en` and `rd_en`).
 
-    reg [8:0] data_mem [255:0];
-    integer i;
-
-    always @(*) begin
-        if(rd_en)
-            rdata <= {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+4]};
-    end
-
-    always @(posedge clk) begin
-        if(rst) begin
-            for(i=0;i<=255;i=i+1)
-                data_mem[i] <= 0;
-        end else begin
-            if(wr_en)
-                {data_mem[addr],data_mem[addr+1],data_mem[addr+2],data_mem[addr+4]} <= wdata; 
-        end
-    end
-    
-endmodule
-```
 We have the following testbench.
 ```python
 @cocotb.test()
@@ -484,164 +290,4 @@ We get the following output waveform.
 ![DataMemory](Figures/datamem.png)
 
 ## Controller
-For this datapath, all the RV32I instructions have been implemented except for **lb**, **lh**, **lbu**, **lhu**, **sb** and **sh**.
-
-We have the following verilog code for our controller.
-```verilog
-module Controller (
-    input [31:0] Instruction,
-    output reg [3:0] alu_op,output reg reg_wr, sel_A, sel_B,
-    wr_en, rd_en, unsign,output reg [2:0] br_type, output reg [1:0] wb_sel
-);  
-    wire [6:0] opcode, func7 ;
-    wire [2:0] func3;
-    assign opcode = Instruction[6:0];
-    assign func7 = Instruction[31:25];
-    assign func3 = Instruction[14:12];
-    always_comb begin 
-        alu_op = 0;
-        reg_wr = 0;
-        sel_A = 0;
-        sel_B = 0;
-        wr_en = 0;
-        rd_en = 0;
-        wb_sel = 0;
-        br_type = 3'b111;
-        unsign = 0;
-        case (opcode)
-            // I type load
-            7'd3: begin
-                reg_wr = 1;
-                sel_B = 1;
-                rd_en = 1;
-                wb_sel = 2;
-            end
-            // S type sw only
-            7'd35: begin
-                sel_B = 1;
-                wr_en = 1;
-                wb_sel = 2;
-            end
-            // I type
-            7'd19: begin
-                reg_wr = 1;
-                sel_B = 1;
-                rd_en = 1;
-                wb_sel = 1;
-                case (func3)
-                    7'd0: alu_op = 0;
-                    7'd1: begin
-                        alu_op = 1;
-                        unsign = 1;
-                    end 
-                    7'd2: begin
-                        alu_op = 10;
-                    end
-                    7'd3: begin
-                        alu_op = 10;
-                        unsign = 1;
-                    end
-                    7'd4: begin
-                        alu_op = 2;
-                    end
-                    7'd5: begin
-                        case(func7)
-                        7'b0 : alu_op = 3;
-                        7'b0100000: alu_op = 4;
-                        default: alu_op = 3;
-                        endcase
-                    end
-                    7'd6: alu_op = 5;
-                    7'd7: alu_op = 6;
-                    default: alu_op = 0;
-                endcase
-            end
-            // U Type auipc
-            7'd23: begin 
-                alu_op = 0;
-                sel_A = 1;
-                sel_B = 1;
-                br_type = 6;
-            end
-            // U Type lui
-            7'd55: begin
-                alu_op = 9;
-                reg_wr = 1;
-                sel_B = 1;
-                rd_en = 1;
-                wb_sel = 1;
-            end
-            // R Type
-            7'd51: begin
-                reg_wr = 1;
-                rd_en = 1;
-                wb_sel = 1;
-                case (func3)
-                    7'd0:begin
-                        case (func7)
-                            7'b0: alu_op = 0;
-                            7'b0100000: alu_op = 7;
-                            default: alu_op = 0;
-                        endcase
-                    end 
-                    7'd1: begin
-                        alu_op = 1;
-                    end 
-                    7'd2: begin
-                        alu_op = 10;
-                    end
-                    7'd3: begin
-                        alu_op = 10;
-                        unsign = 1;
-                    end
-                    7'd4: begin
-                        alu_op = 2;
-                    end
-                    7'd5: begin
-                        case(func7)
-                        7'd0 : alu_op = 3;
-                        7'b0100000: alu_op = 4;
-                        default: alu_op = 3;
-                        endcase
-                    end
-                    7'd6: alu_op = 5;
-                    7'd7: alu_op = 6;
-                    default: alu_op = 0;
-                endcase
-            end
-            // B Type
-            7'd99: begin
-                sel_A = 1;
-                sel_B = 1;
-                case(func3)
-                    0: br_type = 0;
-                    1: br_type = 1;
-                    4: br_type = 2;
-                    5: br_type = 3;
-                    6: br_type = 4;
-                    7: br_type = 5;
-                default: br_type = 7;
-                endcase
-            end 
-            // I JALR
-            7'd103: begin
-                sel_A = 1;
-                sel_B = 1;
-                wb_sel = 1;
-                reg_wr = 1;
-                br_type = 6;
-            end
-            // J Type
-            7'd111: begin
-                sel_A = 1;
-                sel_B = 1;
-                br_type = 6;
-                reg_wr = 1;
-                wb_sel = 0;
-            end
-            //default: 
-        endcase
-    end
-    
-endmodule
-```
+For this datapath, all the RV32I instructions have been implemented except for **lb**, **lh**, **lbu**, **lhu**, **sb** and **sh**. The [Controller](srcs/Controller.sv) generates different control signals(`alu_op, reg_wr, sel_A, sel_B, wr_en, rd_en, unsign, br_type, wb_sel`) for the different datapath modules based on the `Instruction` available at the input. 
