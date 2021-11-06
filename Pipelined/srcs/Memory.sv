@@ -15,9 +15,6 @@ module Memory (
         wr_enM <= wr_enE;
         rd_enM <= wr_enE;
         wb_selM <= wb_selE;
-    end
-    
-    always @(negedge clk ) begin
         reg_wrM <= reg_wrE;
     end
 

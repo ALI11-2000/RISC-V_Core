@@ -10,10 +10,7 @@ module Writeback (
         RD_W <= RD_M;
         Instruction_W <= Instruction_M;
         wb_selW <= wb_selM;
-    end
-
-    always @(negedge clk ) begin
         reg_wrW <= reg_wrM;
     end
-    
+
 endmodule

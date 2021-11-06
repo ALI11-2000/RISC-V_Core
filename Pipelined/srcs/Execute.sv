@@ -16,9 +16,6 @@ module Execute (
         Instruction_E <= Instruction_D;
         {alu_opE, sel_AE, sel_BE, wr_enE, rd_enE, wb_selE, br_typeE} <= {alu_op, sel_A, sel_B,
         wr_en, rd_en, wb_sel, br_type};
-    end
-
-    always @(negedge clk ) begin
         reg_wrE <= reg_wr;
     end
  
