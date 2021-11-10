@@ -30,6 +30,7 @@ We have the following file structure. All the test are written in the **test.py*
 │   ├── datamem.png
 │   └── gcd.png
 ├── README.md
+├── Single Cycle Hardware
 ├── srcs
 │   ├── ALU.sv
 │   ├── Branch_Condition.sv
