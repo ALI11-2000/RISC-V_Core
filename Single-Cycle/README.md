@@ -17,7 +17,7 @@ Registration: 2018-EE-062
 
 **File Structure**
 
-We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. All the results are in the Figures directory. In order to run the simulation, [cocotb](https://github.com/cocotb/cocotb) is required to be installed. Run the simulation by running ```make``` command in the **tests** folder in terminal. 
+We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. All the results are in the Figures directory. In order to run the simulation, [cocotb](https://github.com/cocotb/cocotb) and [iverilog](https://iverilog.fandom.com/wiki/Installation_Guide) is required to be installed. Run the simulation by running ```make``` command in the [tests](tests) folder in terminal to run the makefile which will perform the simulation using cocotb and dump the signals in the **dump.vcd** file. Vivado project is also available in the [Single Cycle Hardware](Single%20Cycle%20Hardware) folder which implements the processor on the FPGA board it takes the two inputs(`num1` and `num2`) from the user with switches and displays the output on the seven segment when the reset signal(`rst`) is set. The Vivado project also contains the simulation which is done using System Verilog. 
 ```bash
 ├── Figures
 │   ├── ALU.png
@@ -30,6 +30,7 @@ We have the following file structure. All the test are written in the **test.py*
 │   ├── datamem.png
 │   └── gcd.png
 ├── README.md
+├── Single Cycle Hardware
 ├── srcs
 │   ├── ALU.sv
 │   ├── Branch_Condition.sv
