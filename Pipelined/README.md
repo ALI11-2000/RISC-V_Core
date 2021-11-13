@@ -3,34 +3,7 @@ Author: Ali Imran
 Registration: 2018-EE-062
 
 
-**File Structure**
-
-We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. 
-```bash
-├── Figures
-│   ├── ckt.png
-│   └── phase1_out.png
-├── README.md
-├── Report.pdf
-├── srcs
-│   ├── ALU.sv
-│   ├── Branch_Condition.sv
-│   ├── Controller.sv
-│   ├── Data_Memory.sv
-│   ├── Decode.sv
-│   ├── Execute.sv
-│   ├── Immediate_Generator.sv
-│   ├── Instruction_Memory.sv
-│   ├── Memory.sv
-│   ├── Program_Counter.sv
-│   ├── Register_File.sv
-│   ├── Writeback.sv
-│   ├── instruction_mem.mem
-│   └── top.sv
-└── tests
-    ├── Makefile
-    └── test.py
-```
+All the test are written in the **test.py** in **tests** directory. Run the makefile to start the simulation. 
 
 # Pipelined RISC-V Processor
 ## Phase 1
