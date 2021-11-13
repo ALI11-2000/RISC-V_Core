@@ -3,34 +3,7 @@ Author: Ali Imran
 Registration: 2018-EE-062
 
 
-**File Structure**
-
-We have the following file structure. All the test are written in the **test.py** structure. Run the makefile to start the simulation. 
-```bash
-├── Figures
-│   ├── ckt.png
-│   └── phase1_out.png
-├── README.md
-├── Report.pdf
-├── srcs
-│   ├── ALU.sv
-│   ├── Branch_Condition.sv
-│   ├── Controller.sv
-│   ├── Data_Memory.sv
-│   ├── Decode.sv
-│   ├── Execute.sv
-│   ├── Immediate_Generator.sv
-│   ├── Instruction_Memory.sv
-│   ├── Memory.sv
-│   ├── Program_Counter.sv
-│   ├── Register_File.sv
-│   ├── Writeback.sv
-│   ├── instruction_mem.mem
-│   └── top.sv
-└── tests
-    ├── Makefile
-    └── test.py
-```
+All the test are written in the **test.py** in **tests** directory. Run the makefile to start the simulation. 
 
 # Pipelined RISC-V Processor
 ## Phase 1
@@ -73,7 +46,7 @@ For phase 2, we are going to remove the data hazards first for which we are goin
 
 Following assembly code has been added in the **instruction_mem.mem** file to test the second phase of the pipeline.
 ```assembly
-	addi x10,x0,10
+    addi x10,x0,10
     addi x11,x0,11
     add x12,x10,x11
 ```
