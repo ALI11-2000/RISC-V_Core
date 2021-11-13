@@ -11,14 +11,15 @@
 `include "../srcs/Memory.sv"
 `include "../srcs/Writeback.sv"
 `include "../srcs/mux31.sv"
-`include "../srcs/forwarding_unit.sv"
+`include "../srcs/hazard_unit.sv"
 `timescale 1ns/1ns
 
 module top(
+    input [31:0] num1, num2, output [31:0] result,
     input clk, rst
 );
     
-    wire[31:0] rdata1, rdata2, num1, num2, result;
+    wire[31:0] rdata1, rdata2;
     wire [31:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31;
     wire [4:0] raddr1, raddr2, waddr;
     reg [31:0] wdata;
@@ -32,8 +33,8 @@ module top(
     wire [31:0] PC_E, rs1_E, rs2_E, Immediate_Value_E, mux_out_A, mux_out_B;
     wire [31:0] Instruction_E, WD_M, Instruction_M, RD_W, Instruction_W;
 
-    Decode pipeline_decode(.PC_D(PC_D), .Instruction_D(Instruction_D),
-    .PC(PC), .Instruction(Instruction), .clk(clk));
+    Decode pipeline_decode(.PC_D(PC_D), .Instruction_D(Instruction_D), .rst(rst),
+    .PC(PC), .Instruction(Instruction), .clk(clk), .StallD(StallD), .FlushD(FlushD));
 
     Execute pipeline_execute(
     .PC_E(PC_E), .rs1_E(rs1_E), .rs2_E(rs2_E),
@@ -43,21 +44,21 @@ module top(
     .PC_D(PC_D), .rdata1(rdata1), .rdata2(rdata2),
     .Immediate_Value(Immediate_Value), .Instruction_D(Instruction_D),
     .alu_op(alu_op), .reg_wr(reg_wr), .sel_A(sel_A), .sel_B(sel_B),
-    .wr_en(wr_en), .rd_en(rd_en), .wb_sel(wb_sel), .br_type(br_type), .clk(clk)
-    );
+    .wr_en(wr_en), .rd_en(rd_en), .wb_sel(wb_sel), .br_type(br_type), .clk(clk),
+    .FlushE(FlushE), .rst(rst));
 
     Memory pipeline_memory(.PC_M(PC_M), .ALU_out_M(ALU_out_M), .WD_M(WD_M),
     .Instruction_M(Instruction_M), .reg_wrM(reg_wrM), .wr_enM(wr_enM),
     .rd_enM(rd_enM), .wb_selM(wb_selM),
     .PC_E(PC_E), .ALU_out_E(ALU_out), .WD_E(mux_out_B),
     .Instruction_E(Instruction_E), .reg_wrE(reg_wrE), .wr_enE(wr_enE),
-    .rd_enE(rd_enE), .wb_selE(wb_selE), .clk(clk)
+    .rd_enE(rd_enE), .wb_selE(wb_selE), .clk(clk), .rst(rst)
     );
 
     Writeback pipeline_writeback( .PC_W(PC_W), .ALU_out_W(ALU_out_W), .RD_W(RD_W), .Instruction_W(Instruction_W),
     .reg_wrW(reg_wrW), .wb_selW(wb_selW),
     .PC_M(PC_M), .ALU_out_M(ALU_out_M), .RD_M(rdata), .Instruction_M(Instruction_M),
-    .reg_wrM(reg_wrM), .wb_selM(wb_selM), .clk(clk)
+    .reg_wrM(reg_wrM), .wb_selM(wb_selM), .clk(clk), .rst(rst)
     );
 
     Register_File rf(.rdata1(rdata1), .rdata2(rdata2), 
@@ -69,7 +70,7 @@ module top(
 
     Instruction_Memory im(.Instruction(Instruction), .Address(PC));
 
-    Program_Counter pc(.ALU_out(ALU_out_M), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC), .hard_write(hard_write));
+    Program_Counter pc(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC), .hard_write(hard_write), .StallF(StallF));
 
     Immediate_Generator ig(.Immediate_Value(Immediate_Value), .Instruction(Instruction_D), .unsign(unsign));
 
@@ -78,16 +79,18 @@ module top(
         B <= sel_BE ? Immediate_Value_E : mux_out_B;
     end
     
-    mux31 m1(.out(mux_out_A), .b(ALU_out_M), .a(rs1_E), .c(ALU_out_W), .sel(For_A));
+    mux31 m1(.out(mux_out_A), .b(ALU_out_M), .a(rs1_E), .c(wdata), .sel(For_A));
 
-    mux31 m2(.out(mux_out_B), .b(ALU_out_M), .a(rs2_E), .c(ALU_out_W), .sel(For_B));
+    mux31 m2(.out(mux_out_B), .b(ALU_out_M), .a(rs2_E), .c(wdata), .sel(For_B));
 
     ALU al(.ALU_out(ALU_out),.A(A), .B(B),.alu_op(alu_opE));
 
     Branch_Condition bcond(.br_taken(br_taken), .A(mux_out_A), .B(mux_out_B), .br_type(br_typeE));
 
-    fowarding_unit fowarding(.For_A(For_A), .For_B(For_B), .reg_wrM(reg_wrM), .reg_wrW(reg_wrW),
-    .Instruction_E(Instruction_E), .Instruction_M(Instruction_M), .Instruction_W(Instruction_W));
+    hazard_unit hazard(.For_A(For_A), .For_B(For_B), .reg_wrM(reg_wrM), .reg_wrW(reg_wrW),
+    .Instruction_E(Instruction_E), .Instruction_M(Instruction_M), .Instruction_W(Instruction_W),
+    .Instruction_D(Instruction_D), .wb_selE(wb_selE), .StallF(StallF), .StallD(StallD), .FlushE(FlushE),
+    .FlushD(FlushD), .br_taken(br_taken));
 
     Data_Memory dmem(.num1(num1), .num2(num2), .result(result), .hard_write(hard_write),
                      .rdata(rdata), .wdata(WD_M), .addr(ALU_out_M),

@@ -42,9 +42,26 @@ We get the following output from our simulation.
 ## Phase 2
 ### Data Hazards
 For phase 2, we are going to remove the data hazards first for which we are going to add the [Forwarding unit](srcs/forwarding_unit.sv). The forwarding unit compares the destination register of the previous and the second previous instruction with the source registers of the current instruction and forwards the ALU output from the memory and the writeback stage to the ALU inputs at the execution stage based on the comparison and the register write signals at the memory and writeback stage.
+
 ![Phase 2 ckt diagram](Figures/ckt2.png)
 
-Following assembly code has been added in the **instruction_mem.mem** file to test the second phase of the pipeline.
+The forwarding unit implements the following conditions.
+```verilog
+if (rs1_E == rd_M && reg_wrM && rs1_E != 5'b0) 
+    Forward ALU_out_M to A
+else if (rs1_E == rd_W && reg_wrW && rs1_E != 5'b0) 
+    Forward ALU_out_W to A
+
+if (rs2_E == rd_M && reg_wrM && rs2_E != 5'b0)
+    Forward ALU_out_M to B
+else if (rs2_E == rd_W && reg_wrW && rs2_E != 5'b0) 
+    Forward ALU_out_W to B
+
+else
+    Forward the register values
+```
+
+Following assembly code has been added in the **instruction_mem.mem** file for testing the forwarding of the pipeline.
 ```assembly
     addi x10,x0,10
     addi x11,x0,11
@@ -59,3 +76,75 @@ For the above code we have the following machine code.
 ```
 We get the following output for the above assembly.
 ![Pipeline phase 2 output](Figures/phase2_data_out.png)
+
+
+For the **lw** instruction, we need to stall the pipeline. We can identify the hazard by the `wb_selE` signal and we compare `rd_E` with `rs1_D` and `rs2_D`. We add stall signal to the Program Counter(Fetch Stage) and the Decode pipeline register. And the a Flush signal is added to the Execute pipeline register to clear the garbage values. 
+
+For the **lw** stall, we implement the following conditions.
+```verilog
+if(wb_selE == 2'b10 && (rs1_D == rd_E || rs2_D == rd_E )) 
+    StallF = 1;
+    StallD = 1;
+    FlushE = 1;
+``` 
+
+Following assembly code has been added in the **instruction_mem.mem** file for testing the stalling of the pipeline.
+```assembly
+    lw x10,0(x0)
+    addi x11,x10,5
+    addi x12,x11,10
+```
+For the above code we have the following machine code.
+```
+00000000
+00002503
+00550593
+00a58613
+```
+We get the following output for the above assembly.
+![Pipeline phase 2 output with stall](Figures/phase2_data_out1.png)
+
+### Control Hazards
+For the branch and jump hazards, we are going to flush the Decode and fetch stage incase the `br_taken` signal becomes true. We have the following condition.
+
+```verilog
+if(br_taken)
+    FlushD = 1;
+    FlushE = 1;
+```
+
+For this code, we are going to test the GCD assembly to test the hazards in out pipeline.
+```assembly
+    lw x8, 0(x0)
+    lw x9, 4(x0)
+gcd:
+    beq x8, x9, stop
+    blt x8, x9, less
+    sub x8, x8, x9
+    j gcd
+less:
+    sub x9, x9, x8
+    j gcd
+stop:
+    sw x8,8(x0)
+    lw x10,8(x0)
+end:
+    j end
+ ```
+For the above assembly, we have the following machine code in the **instruction_mem.mem**.
+```machine
+00000000
+00002403
+00402483
+00940c63
+00944663
+409c0c33
+ff5ff06f
+408484b3
+fedff06f
+00802423
+00802503
+0000006f
+```
+We get the following waveform.
+![Pipeline with hazards removal](Figures/phase2_data_out2.png)
