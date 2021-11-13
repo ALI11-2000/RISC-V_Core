@@ -66,3 +66,5 @@ For the above code we have the following machine code.
 ```
 We get the following output from our simulation.
 ![Phase 1 Pipeline Output](Figures/phase1_out.png)
+## Phase 2
+For phase 2, we are going to remove the data hazards first for which we are going to add the forwarding unit. The forwarding unit compares the destination register of the previous and the second previous instruction with the source registers of the current instruction and forwards the ALU output from the memory and the writeback stage to the ALU inputs at the execution stage based on the comparison and the register write signals at the memory and writeback stage.

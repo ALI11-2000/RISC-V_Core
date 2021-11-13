@@ -10,6 +10,8 @@
 `include "../srcs/Execute.sv"
 `include "../srcs/Memory.sv"
 `include "../srcs/Writeback.sv"
+`include "../srcs/mux31.sv"
+`include "../srcs/forwarding_unit.sv"
 `timescale 1ns/1ns
 
 module top(
@@ -24,10 +26,10 @@ module top(
     reg [31:0] A, B;
     wire [3:0] alu_op, alu_opE;
     wire [2:0] br_type, br_typeE;
-    wire [1:0] wb_sel, wb_selE, wb_selM, wb_selW;
+    wire [1:0] wb_sel, wb_selE, wb_selM, wb_selW, For_A, For_B;
     wire sel_A, sel_B;
     wire [31:0] PC_D, PC_M, PC_W, Instruction_D;
-    wire [31:0] PC_E, rs1_E, rs2_E, Immediate_Value_E;
+    wire [31:0] PC_E, rs1_E, rs2_E, Immediate_Value_E, mux_out_A, mux_out_B;
     wire [31:0] Instruction_E, WD_M, Instruction_M, RD_W, Instruction_W;
 
     Decode pipeline_decode(.PC_D(PC_D), .Instruction_D(Instruction_D),
@@ -47,7 +49,7 @@ module top(
     Memory pipeline_memory(.PC_M(PC_M), .ALU_out_M(ALU_out_M), .WD_M(WD_M),
     .Instruction_M(Instruction_M), .reg_wrM(reg_wrM), .wr_enM(wr_enM),
     .rd_enM(rd_enM), .wb_selM(wb_selM),
-    .PC_E(PC_E), .ALU_out_E(ALU_out), .WD_E(rs2_E),
+    .PC_E(PC_E), .ALU_out_E(ALU_out), .WD_E(mux_out_B),
     .Instruction_E(Instruction_E), .reg_wrE(reg_wrE), .wr_enE(wr_enE),
     .rd_enE(rd_enE), .wb_selE(wb_selE), .clk(clk)
     );
@@ -72,14 +74,20 @@ module top(
     Immediate_Generator ig(.Immediate_Value(Immediate_Value), .Instruction(Instruction_D), .unsign(unsign));
 
     always @(*) begin
-        A <= sel_AE ? PC_E : rs1_E;
-        B <= sel_BE ? Immediate_Value_E : rs2_E;
+        A <= sel_AE ? PC_E : mux_out_A;
+        B <= sel_BE ? Immediate_Value_E : mux_out_B;
     end
     
+    mux31 m1(.out(mux_out_A), .b(ALU_out_M), .a(rs1_E), .c(ALU_out_W), .sel(For_A));
+
+    mux31 m2(.out(mux_out_B), .b(ALU_out_M), .a(rs2_E), .c(ALU_out_W), .sel(For_B));
 
     ALU al(.ALU_out(ALU_out),.A(A), .B(B),.alu_op(alu_opE));
 
-    Branch_Condition bcond(.br_taken(br_taken), .A(rs1_E), .B(rs2_E), .br_type(br_typeE));
+    Branch_Condition bcond(.br_taken(br_taken), .A(mux_out_A), .B(mux_out_B), .br_type(br_typeE));
+
+    fowarding_unit fowarding(.For_A(For_A), .For_B(For_B), .reg_wrM(reg_wrM), .reg_wrW(reg_wrW),
+    .Instruction_E(Instruction_E), .Instruction_M(Instruction_M), .Instruction_W(Instruction_W));
 
     Data_Memory dmem(.num1(num1), .num2(num2), .result(result), .hard_write(hard_write),
                      .rdata(rdata), .wdata(WD_M), .addr(ALU_out_M),
