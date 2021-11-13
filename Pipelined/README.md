@@ -72,7 +72,7 @@ For phase 2, we are going to remove the data hazards first for which we are goin
 
 Following assembly code has been added in the **instruction_mem.mem** file to test the second phase of the pipeline.
 ```assembly
-	addi x10,x0,10
+    addi x10,x0,10
     addi x11,x0,11
     add x12,x10,x11
 ```
