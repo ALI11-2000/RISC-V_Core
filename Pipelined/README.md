@@ -2,6 +2,11 @@ Author: Ali Imran
 
 Registration: 2018-EE-062
 
+- [Pipelined RISC-V Processor](#pipelined-risc-v-processor)
+  - [Phase 1](#phase-1)
+  - [Phase 2](#phase-2)
+    - [Data Hazards](#data-hazards)
+    - [Control Hazards](#control-hazards)
 
 All the test are written in the **test.py** in **tests** directory. Run the makefile to start the simulation. 
 
@@ -41,7 +46,7 @@ We get the following output from our simulation.
 ![Phase 1 Pipeline Output](Figures/phase1_out.png)
 ## Phase 2
 ### Data Hazards
-For phase 2, we are going to remove the data hazards first for which we are going to add the [Forwarding unit](srcs/forwarding_unit.sv). The forwarding unit compares the destination register of the previous and the second previous instruction with the source registers of the current instruction and forwards the ALU output from the memory and the writeback stage to the ALU inputs at the execution stage based on the comparison and the register write signals at the memory and writeback stage.
+For phase 2, we are going to remove the data hazards first for which we are going to add the [Hhazard detection unit](srcs/forwarding_unit.sv). The forwarding unit compares the destination register of the previous and the second previous instruction with the source registers of the current instruction and forwards the ALU output from the memory and the writeback stage to the ALU inputs at the execution stage based on the comparison and the register write signals at the memory and writeback stage.
 
 ![Phase 2 ckt diagram](Figures/ckt2.png)
 
