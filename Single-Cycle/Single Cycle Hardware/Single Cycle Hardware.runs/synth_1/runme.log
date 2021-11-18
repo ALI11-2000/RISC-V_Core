@@ -14,38 +14,136 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18960 
+INFO: Helper process launched with PID 17284 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 356.207 ; gain = 98.836
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 358.191 ; gain = 101.152
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_hardware' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'top' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'Register_File' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Instruction_Memory' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:1]
-INFO: [Synth 8-3876] $readmem data file 'instruction_mem.mem' is read successfully [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'Instruction_Memory' (2#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (3#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Immediate_Generator' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Immediate_Generator' (4#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Branch_Condition' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Branch_Condition' (6#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Data_Memory' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Data_Memory' (7#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'Controller' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:41]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:89]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:21]
-INFO: [Synth 8-6155] done synthesizing module 'Controller' (8#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
-WARNING: [Synth 8-87] always_comb on 'wdata_reg' did not result in combinational logic [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
-INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:49]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:74]
-INFO: [Synth 8-6155] done synthesizing module 'top_hardware' (10#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'top_hardware' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:7043]
+	Parameter MEMORY_SIZE bound to: 2048 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: instruction_mem.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 6 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter MEMORY_SIZE bound to: 2048 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: instruction_mem.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 6 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 6 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 64 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 6 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 6 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 6 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 6 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'instruction_mem.mem' is read successfully [D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1079]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (2#1) [D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (3#1) [D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:7043]
+WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (6) of module 'xpm_memory_spram' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [Synth 8-689] width (1) of port connection 'dina' does not match port width (32) of module 'xpm_memory_spram' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (4#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Immediate_Generator' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Immediate_Generator' (5#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (6#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Condition' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Condition' (7#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Data_Memory' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Data_Memory' (8#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:105]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:41]
+INFO: [Synth 8-226] default block is never used [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:89]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (9#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+WARNING: [Synth 8-87] always_comb on 'wdata_reg' did not result in combinational logic [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+WARNING: [Synth 8-3848] Net sleep in module/entity top does not have driver. [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+WARNING: [Synth 8-3848] Net rsta in module/entity top does not have driver. [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+WARNING: [Synth 8-3848] Net dina in module/entity top does not have driver. [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+WARNING: [Synth 8-3848] Net injectsbiterra in module/entity top does not have driver. [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+WARNING: [Synth 8-3848] Net injectdbiterra in module/entity top does not have driver. [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'Clock_divider' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv:1]
+	Parameter DIVISOR bound to: 28'b0000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'Clock_divider' (11#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:65]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'top_hardware' (12#1) [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[24]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[23]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[22]
@@ -62,8 +160,57 @@ WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[9]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[8]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[7]
 WARNING: [Synth 8-3331] design Data_Memory has unconnected port hard_write
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port sleep
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regcea
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[31]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[30]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[29]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[28]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[27]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[26]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[25]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[24]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[23]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[22]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[21]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[20]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[19]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[18]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[17]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[16]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[15]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[14]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[13]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[12]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[11]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[10]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[9]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[8]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[7]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[6]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterrb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterrb
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 481.477 ; gain = 224.105
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 483.816 ; gain = 226.777
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,45 +219,50 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin xpm_memory_spram_inst:sleep to constant 0 [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:46]
+WARNING: [Synth 8-3295] tying undriven pin xpm_memory_spram_inst:rsta to constant 0 [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:46]
+WARNING: [Synth 8-3295] tying undriven pin xpm_memory_spram_inst:dina[0] to constant 0 [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:46]
+WARNING: [Synth 8-3295] tying undriven pin xpm_memory_spram_inst:injectsbiterra to constant 0 [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:46]
+WARNING: [Synth 8-3295] tying undriven pin xpm_memory_spram_inst:injectdbiterra to constant 0 [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:46]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 481.477 ; gain = 224.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 483.816 ; gain = 226.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 481.477 ; gain = 224.105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 483.816 ; gain = 226.777
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
-Finished Parsing XDC File [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_hardware_propImpl.xdc].
+Parsing XDC File [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
+Finished Parsing XDC File [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_hardware_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_hardware_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 823.223 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 823.227 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.223 ; gain = 565.852
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 823.227 ; gain = 566.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.223 ; gain = 565.852
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 823.227 ; gain = 566.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.223 ; gain = 565.852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 823.227 ; gain = 566.188
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "register_file_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_file_reg[30]" won't be mapped to RAM because it is too sparse
@@ -144,7 +296,6 @@ INFO: [Synth 8-5546] ROM "register_file_reg[3]" won't be mapped to RAM because i
 INFO: [Synth 8-5546] ROM "register_file_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_file_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_file_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "instruction_memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "reg_wr" is below threshold of ROM address width. It will be mapped to LUTs
@@ -153,11 +304,10 @@ INFO: [Synth 8-5546] ROM "sel_B" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wr_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "rd_en" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-327] inferring latch for variable 'rdata_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:13]
-WARNING: [Synth 8-327] inferring latch for variable 'wdata_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
-WARNING: [Synth 8-327] inferring latch for variable 'LED_out_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:50]
+WARNING: [Synth 8-327] inferring latch for variable 'rdata_reg' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:13]
+WARNING: [Synth 8-327] inferring latch for variable 'wdata_reg' [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 823.223 ; gain = 565.852
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 823.227 ; gain = 566.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,27 +320,28 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 3     
 	   3 Input     32 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---XORs : 
 	               32 Bit    Wide XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 33    
+	               32 Bit    Registers := 34    
 	                9 Bit    Registers := 256   
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               2K Bit         RAMs := 1     
 +---Muxes : 
-	  13 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
 	   6 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 1     
 	   4 Input      9 Bit        Muxes := 160   
 	   2 Input      9 Bit        Muxes := 262   
-	   2 Input      8 Bit        Muxes := 1     
-	  32 Input      7 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 2     
 	  10 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   3 Input      3 Bit        Muxes := 3     
@@ -213,10 +364,10 @@ Hierarchical RTL Component report
 Module top_hardware 
 Detailed RTL Component Info : 
 +---Registers : 
+	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	  32 Input      7 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module Register_File 
 Detailed RTL Component Info : 
@@ -224,803 +375,18 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 32    
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 32    
-Module Instruction_Memory 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  13 Input     32 Bit        Muxes := 1     
-Module Immediate_Generator 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   6 Input     32 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-Module ALU 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   3 Input     32 Bit       Adders := 1     
-+---XORs : 
-	   2 Input     32 Bit         XORs := 1     
-+---XORs : 
-	               32 Bit    Wide XORs := 1     
-Module Data_Memory 
+Module xpm_memory_base 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                9 Bit    Registers := 256   
-+---Muxes : 
-	   4 Input      9 Bit        Muxes := 160   
-	   2 Input      9 Bit        Muxes := 262   
-	   4 Input      2 Bit        Muxes := 24    
-	   2 Input      1 Bit        Muxes := 261   
-	   4 Input      1 Bit        Muxes := 64    
-	   5 Input      1 Bit        Muxes := 192   
-Module Controller 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   8 Input      4 Bit        Muxes := 2     
-	  10 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   3 Input      3 Bit        Muxes := 3     
-	   7 Input      3 Bit        Muxes := 1     
-	  10 Input      3 Bit        Muxes := 1     
-	  10 Input      2 Bit        Muxes := 1     
-	  10 Input      1 Bit        Muxes := 6     
-	   8 Input      1 Bit        Muxes := 2     
-Module top 
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module Program_Counter 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-	   4 Input     32 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 240 (col length:80)
-BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5587] ROM size for "reg_wr" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5587] ROM size for "sel_A" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "sel_B" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wr_en" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "rd_en" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[5] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[4] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[3] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[2] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[1] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[0] driven by constant 1
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[24]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[23]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[22]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[21]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[20]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[19]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[18]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[17]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[16]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[15]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[11]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[10]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[9]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[8]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[7]
-WARNING: [Synth 8-3331] design Data_Memory has unconnected port hard_write
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[31]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[30]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[29]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[28]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[27]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[26]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[25]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[24]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[23]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[22]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[21]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[20]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[19]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[18]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[17]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[16]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[15]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[14]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[11]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[10]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[9]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[8]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[7]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[6]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[1]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[0]
-WARNING: [Synth 8-3332] Sequential element (result_reg[31]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[30]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[29]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[28]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[27]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[26]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[25]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[24]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[23]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[22]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[21]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[20]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[19]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[18]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[17]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[16]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[15]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[14]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[13]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[12]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[11]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[10]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[9]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[8]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[0]) is unused and will be removed from module top_hardware.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][2] )
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][27]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][26]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][25]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][24]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][23]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][22]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][21]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][20]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][19]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][18]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][17]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][16]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][15]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][14]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][13]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][12]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][11]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][10]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][9]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][8]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][7]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][0]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][27]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][26]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][25]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][24]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][23]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][22]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][21]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][20]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][19]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][18]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][17]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][16]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][15]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][14]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][13]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][12]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][11]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][10]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][9]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][8]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][7]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][0]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][27]) is unused and will be removed from module top_hardware.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:36 ; elapsed = 00:03:40 . Memory (MB): peak = 905.914 ; gain = 648.543
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:46 ; elapsed = 00:03:51 . Memory (MB): peak = 905.914 ; gain = 648.543
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:15 ; elapsed = 00:04:20 . Memory (MB): peak = 905.914 ; gain = 648.543
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][4]' (FDRE) to 't1/rf/register_file_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][4]' (FDRE) to 't1/rf/register_file_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][4]' (FDRE) to 't1/rf/register_file_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][4]' (FDRE) to 't1/rf/register_file_reg[1][4]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][13]' (FDRE) to 't1/rf/register_file_reg[1][13]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][13]' (FDRE) to 't1/rf/register_file_reg[1][13]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][13]' (FDRE) to 't1/rf/register_file_reg[1][13]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][13]' (FDRE) to 't1/rf/register_file_reg[1][13]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][16]' (FDRE) to 't1/rf/register_file_reg[1][16]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][16]' (FDRE) to 't1/rf/register_file_reg[1][16]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[1][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][28] )
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:46 ; elapsed = 00:04:51 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:48 ; elapsed = 00:04:53 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:49 ; elapsed = 00:04:53 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    54|
-|3     |LUT1   |    22|
-|4     |LUT2   |   138|
-|5     |LUT3   |   693|
-|6     |LUT4   |   280|
-|7     |LUT5   |   427|
-|8     |LUT6   |  2834|
-|9     |MUXF7  |  1103|
-|10    |MUXF8  |   544|
-|11    |FDRE   |  2443|
-|12    |LD     |    32|
-|13    |IBUF   |    13|
-|14    |OBUF   |    15|
-+------+-------+------+
-
-Report Instance Areas: 
-+------+----------+-----------------+------+
-|      |Instance  |Module           |Cells |
-+------+----------+-----------------+------+
-|1     |top       |                 |  8600|
-|2     |  t1      |top              |  8517|
-|3     |    al    |ALU              |    16|
-|4     |    bcond |Branch_Condition |     8|
-|5     |    dmem  |Data_Memory      |  6166|
-|6     |    pc    |Program_Counter  |  2255|
-|7     |    rf    |Register_File    |    64|
-+------+----------+-----------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 564 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:34 ; elapsed = 00:04:43 . Memory (MB): peak = 1018.188 ; gain = 419.070
-Synthesis Optimization Complete : Time (s): cpu = 00:04:49 ; elapsed = 00:04:54 . Memory (MB): peak = 1018.188 ; gain = 760.816
-INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1746 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  LD => LDCE: 32 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-261 Infos, 170 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:53 ; elapsed = 00:04:58 . Memory (MB): peak = 1018.188 ; gain = 773.887
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/top_hardware.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file top_hardware_utilization_synth.rpt -pb top_hardware_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1018.188 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  4 11:27:54 2021...
-
-*** Running vivado
-    with args -log top_hardware.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_hardware.tcl
-
-
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source top_hardware.tcl -notrace
-Command: synth_design -top top_hardware -part xc7a100tcsg324-1
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11912 
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 355.918 ; gain = 99.457
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_hardware' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'top' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'Register_File' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Instruction_Memory' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:1]
-INFO: [Synth 8-3876] $readmem data file 'instruction_mem.mem' is read successfully [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:7]
-INFO: [Synth 8-6155] done synthesizing module 'Instruction_Memory' (2#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (3#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Immediate_Generator' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Immediate_Generator' (4#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Branch_Condition' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Branch_Condition' (6#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'Data_Memory' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Data_Memory' (7#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:1]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'Controller' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:41]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:89]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:21]
-INFO: [Synth 8-6155] done synthesizing module 'Controller' (8#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv:1]
-WARNING: [Synth 8-87] always_comb on 'wdata_reg' did not result in combinational logic [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
-INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'Clock_divider' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv:1]
-	Parameter DIVISOR bound to: 28'b0000000000000000000000000010 
-INFO: [Synth 8-6155] done synthesizing module 'Clock_divider' (10#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv:1]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:51]
-INFO: [Synth 8-226] default block is never used [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:76]
-INFO: [Synth 8-6155] done synthesizing module 'top_hardware' (11#1) [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:3]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[24]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[23]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[22]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[21]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[20]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[19]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[18]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[17]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[16]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[15]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[11]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[10]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[9]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[8]
-WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[7]
-WARNING: [Synth 8-3331] design Data_Memory has unconnected port hard_write
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 481.242 ; gain = 224.781
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 481.242 ; gain = 224.781
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 481.242 ; gain = 224.781
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
-Finished Parsing XDC File [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_hardware_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_hardware_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Completed Processing XDC Constraints
-
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 823.395 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.395 ; gain = 566.934
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xc7a100tcsg324-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.395 ; gain = 566.934
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.395 ; gain = 566.934
----------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "register_file_reg[31]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[30]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[29]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[28]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[27]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[26]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[25]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[24]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[23]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[22]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[21]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[20]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[19]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[18]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[17]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[16]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "register_file_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "instruction_memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "reg_wr" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5587] ROM size for "sel_A" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "sel_B" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wr_en" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5587] ROM size for "rd_en" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-327] inferring latch for variable 'rdata_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv:13]
-WARNING: [Synth 8-327] inferring latch for variable 'wdata_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
-WARNING: [Synth 8-327] inferring latch for variable 'LED_out_reg' [D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:52]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 823.395 ; gain = 566.934
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input     32 Bit       Adders := 1     
-+---XORs : 
-	   2 Input     32 Bit         XORs := 1     
-+---XORs : 
-	               32 Bit    Wide XORs := 1     
-+---Registers : 
-	               32 Bit    Registers := 33    
-	                9 Bit    Registers := 256   
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	  13 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 3     
-	   6 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
-	   4 Input      9 Bit        Muxes := 160   
-	   2 Input      9 Bit        Muxes := 262   
-	   2 Input      8 Bit        Muxes := 1     
-	  32 Input      7 Bit        Muxes := 1     
-	   8 Input      4 Bit        Muxes := 2     
-	  10 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   3 Input      3 Bit        Muxes := 3     
-	   7 Input      3 Bit        Muxes := 1     
-	  10 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 24    
-	  10 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 294   
-	   4 Input      1 Bit        Muxes := 65    
-	   5 Input      1 Bit        Muxes := 192   
-	  10 Input      1 Bit        Muxes := 6     
-	   8 Input      1 Bit        Muxes := 2     
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module top_hardware 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	  32 Input      7 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module Register_File 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 32    
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 32    
-Module Instruction_Memory 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  13 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 Module Immediate_Generator 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -1103,12 +469,6 @@ INFO: [Synth 8-5546] ROM "sel_B" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wr_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "rd_en" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[5] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[4] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[3] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[2] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[1] driven by constant 1
-WARNING: [Synth 8-3917] design top_hardware has port Anode_Activate[0] driven by constant 1
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[24]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[23]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[22]
@@ -1125,170 +485,46 @@ WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[9]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[8]
 WARNING: [Synth 8-3331] design Controller has unconnected port Instruction[7]
 WARNING: [Synth 8-3331] design Data_Memory has unconnected port hard_write
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[31]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[30]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[29]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[28]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[27]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[26]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[25]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[24]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[23]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[22]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[21]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[20]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[19]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[18]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[17]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[16]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[15]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[14]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[13]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[12]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[11]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[10]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[9]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[8]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[7]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[6]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[1]
-WARNING: [Synth 8-3331] design Instruction_Memory has unconnected port Address[0]
-WARNING: [Synth 8-3332] Sequential element (result_reg[31]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[30]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[29]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[28]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[27]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[26]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[25]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[24]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[23]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[22]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[21]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[20]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[19]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[18]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[17]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[16]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[15]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[14]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[13]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[12]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[11]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[10]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[9]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (result_reg[8]) is unused and will be removed from module Data_Memory.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (LED_out_reg[0]) is unused and will be removed from module top_hardware.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][2] )
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][27]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][26]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][25]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][24]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][23]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][22]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][21]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][20]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][19]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][18]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][17]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][16]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][15]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][14]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][13]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][12]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][11]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][10]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][9]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][8]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][7]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[27][0]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][27]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][26]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][25]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][24]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][23]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][22]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][21]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][20]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][19]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][18]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][17]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][16]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][15]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][14]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][13]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][12]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][11]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][10]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][9]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][8]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][7]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][6]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][5]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][4]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][3]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][2]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][1]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[26][0]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][31]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][30]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][29]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][28]) is unused and will be removed from module top_hardware.
-WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[19][27]) is unused and will be removed from module top_hardware.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regcea
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port clkb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rstb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port enb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[5]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[4]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[3]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[2]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[1]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port addrb[0]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[31]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[30]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[29]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[28]
+WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[27]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:11 ; elapsed = 00:03:14 . Memory (MB): peak = 911.492 ; gain = 655.031
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:59 ; elapsed = 00:04:01 . Memory (MB): peak = 907.902 ; gain = 650.863
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 64 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance t1/xpm_memory_spram_inst/xpm_memory_base_inst/i_0/gen_wr_a.gen_word_narrow.mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance t1/xpm_memory_spram_inst/xpm_memory_base_inst/i_0/gen_wr_a.gen_word_narrow.mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1299,13 +535,27 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:20 ; elapsed = 00:03:25 . Memory (MB): peak = 911.492 ; gain = 655.031
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:08 ; elapsed = 00:04:11 . Memory (MB): peak = 907.902 ; gain = 650.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:47 ; elapsed = 00:03:51 . Memory (MB): peak = 911.492 ; gain = 655.031
+Finished Timing Optimization : Time (s): cpu = 00:04:43 ; elapsed = 00:04:47 . Memory (MB): peak = 907.902 ; gain = 650.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 64 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1316,141 +566,74 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][27]' (FDRE) to 't1/rf/register_file_reg[1][27]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][19]' (FDRE) to 't1/rf/register_file_reg[1][19]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][11]' (FDRE) to 't1/rf/register_file_reg[1][11]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][15]' (FDRE) to 't1/rf/register_file_reg[1][15]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][7]' (FDRE) to 't1/rf/register_file_reg[1][7]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][23]' (FDRE) to 't1/rf/register_file_reg[1][23]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][21]' (FDRE) to 't1/rf/register_file_reg[1][21]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][5]' (FDRE) to 't1/rf/register_file_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][25]' (FDRE) to 't1/rf/register_file_reg[1][25]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][9]' (FDRE) to 't1/rf/register_file_reg[1][9]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][17]' (FDRE) to 't1/rf/register_file_reg[1][17]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][17]' (FDRE) to 't1/rf/register_file_reg[1][17]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][17]' (FDRE) to 't1/rf/register_file_reg[1][17]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][17]' (FDRE) to 't1/rf/register_file_reg[1][17]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][24]' (FDRE) to 't1/rf/register_file_reg[1][24]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][8]' (FDRE) to 't1/rf/register_file_reg[1][8]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][14]' (FDRE) to 't1/rf/register_file_reg[1][14]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][22]' (FDRE) to 't1/rf/register_file_reg[1][22]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][6]' (FDRE) to 't1/rf/register_file_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][26]' (FDRE) to 't1/rf/register_file_reg[1][26]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][10]' (FDRE) to 't1/rf/register_file_reg[1][10]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][18]' (FDRE) to 't1/rf/register_file_reg[1][18]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][18]' (FDRE) to 't1/rf/register_file_reg[1][18]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][18]' (FDRE) to 't1/rf/register_file_reg[1][18]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][18]' (FDRE) to 't1/rf/register_file_reg[1][18]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][12]' (FDRE) to 't1/rf/register_file_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][28]' (FDRE) to 't1/rf/register_file_reg[1][28]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][20]' (FDRE) to 't1/rf/register_file_reg[1][20]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][29]' (FDRE) to 't1/rf/register_file_reg[1][29]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][31]' (FDRE) to 't1/rf/register_file_reg[1][31]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[31][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[30][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[22][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Synth 8-3886] merging instance 't1/rf/register_file_reg[23][30]' (FDRE) to 't1/rf/register_file_reg[1][30]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[29][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[25][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[5][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\t1/rf/register_file_reg[0][0] )
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][31]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][30]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][29]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][28]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][27]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][26]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][25]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][24]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][23]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][22]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][21]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][20]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][19]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][18]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][17]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][16]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][15]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][14]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][13]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][12]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][11]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][10]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][9]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][8]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][7]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][6]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][5]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][4]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][3]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][2]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][1]) is unused and will be removed from module top_hardware.
+WARNING: [Synth 8-3332] Sequential element (t1/rf/register_file_reg[0][0]) is unused and will be removed from module top_hardware.
+INFO: [Synth 8-4480] The timing for the instance t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:14 ; elapsed = 00:04:19 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Technology Mapping : Time (s): cpu = 00:05:03 ; elapsed = 00:05:07 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1474,7 +657,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:16 ; elapsed = 00:04:21 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished IO Insertion : Time (s): cpu = 00:05:05 ; elapsed = 00:05:09 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1487,7 +670,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:16 ; elapsed = 00:04:21 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:05 ; elapsed = 00:05:09 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1499,25 +682,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:17 ; elapsed = 00:04:21 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:05 ; elapsed = 00:05:09 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:17 ; elapsed = 00:04:21 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:05 ; elapsed = 00:05:09 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:17 ; elapsed = 00:04:21 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:06 ; elapsed = 00:05:10 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:17 ; elapsed = 00:04:22 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:06 ; elapsed = 00:05:10 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1530,59 +713,64 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |    61|
-|3     |LUT1   |    39|
-|4     |LUT2   |   127|
-|5     |LUT3   |   708|
-|6     |LUT4   |   287|
-|7     |LUT5   |   385|
-|8     |LUT6   |  2830|
-|9     |MUXF7  |  1103|
-|10    |MUXF8  |   544|
-|11    |FDRE   |  2470|
-|12    |LD     |    32|
-|13    |IBUF   |    13|
-|14    |OBUF   |    15|
-+------+-------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     4|
+|2     |CARRY4   |    67|
+|3     |LUT1     |     4|
+|4     |LUT2     |   132|
+|5     |LUT3     |   241|
+|6     |LUT4     |   256|
+|7     |LUT5     |   465|
+|8     |LUT6     |  3898|
+|9     |MUXF7    |  1380|
+|10    |MUXF8    |   584|
+|11    |RAMB18E1 |     1|
+|12    |FDCE     |     1|
+|13    |FDPE     |     7|
+|14    |FDRE     |  3422|
+|15    |LD       |    64|
+|16    |IBUF     |    13|
+|17    |OBUF     |    15|
++------+---------+------+
 
 Report Instance Areas: 
-+------+----------+-----------------+------+
-|      |Instance  |Module           |Cells |
-+------+----------+-----------------+------+
-|1     |top       |                 |  8617|
-|2     |  dut     |Clock_divider    |    45|
-|3     |  t1      |top              |  8488|
-|4     |    al    |ALU              |    16|
-|5     |    bcond |Branch_Condition |     8|
-|6     |    dmem  |Data_Memory      |  6166|
-|7     |    pc    |Program_Counter  |  2226|
-|8     |    rf    |Register_File    |    64|
-+------+----------+-----------------+------+
++------+---------------------------+-----------------+------+
+|      |Instance                   |Module           |Cells |
++------+---------------------------+-----------------+------+
+|1     |top                        |                 | 10554|
+|2     |  dut                      |Clock_divider    |    46|
+|3     |  t1                       |top              | 10405|
+|4     |    al                     |ALU              |    20|
+|5     |    bcond                  |Branch_Condition |     8|
+|6     |    dmem                   |Data_Memory      |  6195|
+|7     |    pc                     |Program_Counter  |   146|
+|8     |    rf                     |Register_File    |  2304|
+|9     |    xpm_memory_spram_inst  |xpm_memory_spram |  1700|
+|10    |      xpm_memory_base_inst |xpm_memory_base  |     1|
++------+---------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:17 ; elapsed = 00:04:22 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:06 ; elapsed = 00:05:10 . Memory (MB): peak = 987.805 ; gain = 730.766
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 564 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:02 ; elapsed = 00:04:11 . Memory (MB): peak = 1017.633 ; gain = 419.020
-Synthesis Optimization Complete : Time (s): cpu = 00:04:17 ; elapsed = 00:04:22 . Memory (MB): peak = 1017.633 ; gain = 761.172
+Synthesis finished with 0 errors, 0 critical warnings and 98 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:51 ; elapsed = 00:05:00 . Memory (MB): peak = 987.805 ; gain = 391.355
+Synthesis Optimization Complete : Time (s): cpu = 00:05:06 ; elapsed = 00:05:10 . Memory (MB): peak = 987.805 ; gain = 730.766
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1753 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  LD => LDCE: 32 instances
+  A total of 64 instances were transformed.
+  LD => LDCE: 64 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-263 Infos, 170 Warnings, 0 Critical Warnings and 0 Errors encountered.
+139 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:21 ; elapsed = 00:04:25 . Memory (MB): peak = 1017.633 ; gain = 774.055
+synth_design: Time (s): cpu = 00:05:09 ; elapsed = 00:05:14 . Memory (MB): peak = 987.805 ; gain = 743.258
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/top_hardware.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/top_hardware.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_hardware_utilization_synth.rpt -pb top_hardware_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1017.633 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  4 14:12:30 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 987.805 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 18 12:55:43 2021...

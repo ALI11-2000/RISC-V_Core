@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Nov  4 14:14:34 2021
+| Date             : Thu Nov 18 12:58:04 2021
 | Host             : LAPTOP-1GJRHT52 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_hardware_power_routed.rpt -pb top_hardware_power_summary_routed.pb -rpx top_hardware_power_routed.rpx
 | Design           : top_hardware
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 77.843 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 30.340 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 77.046                           |
+| Dynamic (W)              | 29.542                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    28.273 |     8564 |       --- |             --- |
-|   LUT as Logic |    27.796 |     3773 |     63400 |            5.95 |
-|   CARRY4       |     0.229 |       61 |     15850 |            0.38 |
-|   F7/F8 Muxes  |     0.200 |     1647 |     63400 |            2.60 |
-|   Register     |     0.026 |     2502 |    126800 |            1.97 |
-|   BUFG         |     0.022 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    37.066 |     4781 |       --- |             --- |
-| I/O            |    11.707 |       28 |       210 |           13.33 |
+| Slice Logic    |    10.745 |    10553 |       --- |             --- |
+|   LUT as Logic |    10.585 |     4695 |     63400 |            7.41 |
+|   CARRY4       |     0.125 |       67 |     15850 |            0.42 |
+|   Register     |     0.019 |     3502 |    126800 |            2.76 |
+|   BUFG         |     0.009 |        4 |        32 |           12.50 |
+|   F7/F8 Muxes  |     0.007 |     1964 |     63400 |            3.10 |
+|   Others       |     0.000 |       20 |       --- |             --- |
+| Signals        |    12.919 |     5916 |       --- |             --- |
+| Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
+| I/O            |     5.879 |       28 |       210 |           13.33 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    77.843 |          |           |                 |
+| Total          |    30.340 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    65.950 |      65.387 |      0.563 |
-| Vccaux    |       1.800 |     0.520 |       0.427 |      0.093 |
-| Vcco33    |       3.300 |     3.304 |       3.300 |      0.004 |
+| Vccint    |       1.000 |    24.275 |      23.712 |      0.563 |
+| Vccaux    |       1.800 |     0.307 |       0.214 |      0.093 |
+| Vcco33    |       3.300 |     1.654 |       1.650 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,17 +137,19 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------+-----------+
-| Name         | Power (W) |
-+--------------+-----------+
-| top_hardware |    77.046 |
-|   dut        |     0.013 |
-|   t1         |    64.962 |
-|     al       |     0.467 |
-|     bcond    |     0.025 |
-|     dmem     |    11.835 |
-|     pc       |    52.507 |
-|     rf       |     0.040 |
-+--------------+-----------+
++----------------------------+-----------+
+| Name                       | Power (W) |
++----------------------------+-----------+
+| top_hardware               |    29.542 |
+|   dut                      |     0.014 |
+|   t1                       |    23.326 |
+|     al                     |     0.197 |
+|     bcond                  |    <0.001 |
+|     dmem                   |     0.943 |
+|     pc                     |     0.523 |
+|     rf                     |     3.216 |
+|     xpm_memory_spram_inst  |    18.447 |
+|       xpm_memory_base_inst |     4.835 |
++----------------------------+-----------+
 
 

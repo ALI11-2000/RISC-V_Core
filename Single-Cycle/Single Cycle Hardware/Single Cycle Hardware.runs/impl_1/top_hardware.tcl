@@ -60,20 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param synth.incrementalSynthesisCache C:/Users/ali11/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9320-LAPTOP-1GJRHT52/incrSyn
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.cache/wt} [current_project]
-  set_property parent.project_path {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.xpr} [current_project]
-  set_property ip_output_repo {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/top_hardware.dcp}}
-  read_xdc {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  add_files -quiet {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/top_hardware.dcp}}
+  read_xdc {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}
   link_design -top top_hardware -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -153,6 +158,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force top_hardware.mmi }
   write_bitstream -force top_hardware.bit 
   catch {write_debug_probes -quiet -force top_hardware}

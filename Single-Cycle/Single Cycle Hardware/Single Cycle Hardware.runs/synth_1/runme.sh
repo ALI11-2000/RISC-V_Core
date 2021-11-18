@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1'
+HD_PWD='C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

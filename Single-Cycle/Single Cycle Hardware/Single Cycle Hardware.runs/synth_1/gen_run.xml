@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1636016871">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1637221820">
   <File Type="PA-TCL" Name="top_hardware.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_hardware_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_hardware_reports.tcl"/>
@@ -63,15 +63,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/srcs/Instruction_Memory.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Instruction_Memory.sv"/>
-        <Attr Name="ImportTime" Val="1635777361"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/srcs/Program_Counter.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Program_Counter.sv"/>
@@ -101,6 +92,16 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/top_hardware.sv">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/srcs/Instruction_Memory.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Instruction_Memory.sv"/>
+        <Attr Name="ImportTime" Val="1635777361"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

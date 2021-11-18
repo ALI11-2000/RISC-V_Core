@@ -1,0 +1,1823 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 17 12:45:15 2021
+# Process ID: 19348
+# Current directory: C:/Users/ali11/Desktop/Single Cycle Hardware
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1952 C:\Users\ali11\Desktop\Single Cycle Hardware\Single Cycle Hardware.xpr
+# Log file: C:/Users/ali11/Desktop/Single Cycle Hardware/vivado.log
+# Journal file: C:/Users/ali11/Desktop/Single Cycle Hardware\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.xpr}IINFO: [Project 1-313] Project file moved from 'D:/Ubuntu/Single Cycle Hardware' since last save.
+Scanning sources...
+Finished scanning sourcesIINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiedIINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/ip'.Iopen_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 899.617 ; gain = 161.184
+update_cexit
+INFO: [Common 17-206] Exitilaunch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:28]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:30]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:44]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:44]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv" Line 1. Module Instruction_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.simulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ali11/Desktop/Single -notrace
+couldn't read file "C:/Users/ali11/Desktop/Single": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 17 12:45:59 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_behav -key {Behavioral:sim_1:Functional:simulation} -tclbatch {simulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source simulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 919.355 ; gain = 9.941
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/simulation/dut/rf/x10}} {{/simulation/dut/rf/x11}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 966.273 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 966.273 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol dbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:47]
+INFO: [VRFC 10-2458] undeclared symbol sbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:51]
+INFO: [VRFC 10-2458] undeclared symbol clka, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:55]
+INFO: [VRFC 10-2458] undeclared symbol dina, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [VRFC 10-2458] undeclared symbol injectdbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [VRFC 10-2458] undeclared symbol injectsbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+INFO: [VRFC 10-2458] undeclared symbol rsta, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+INFO: [VRFC 10-2458] undeclared symbol sleep, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:85]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:87]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=0,ME...
+Compiling module xpm.xpm_memory_spram(MEMORY_PRIMITIV...
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.simulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_behav -key {Behavioral:sim_1:Functional:simulation} -tclbatch {simulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source simulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 972.414 ; gain = 2.590
+current_wave_config {}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration ''.
+Untitled 2
+add_wave {{/simulation/dut/rf/x10}} {{/simulation/dut/rf/x11}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 972.414 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 974.082 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/simulation/dut/Instruction}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 975.078 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol dbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:47]
+INFO: [VRFC 10-2458] undeclared symbol sbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:51]
+INFO: [VRFC 10-2458] undeclared symbol clka, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:55]
+INFO: [VRFC 10-2458] undeclared symbol dina, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [VRFC 10-2458] undeclared symbol injectdbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [VRFC 10-2458] undeclared symbol injectsbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+INFO: [VRFC 10-2458] undeclared symbol rsta, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+INFO: [VRFC 10-2458] undeclared symbol sleep, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:85]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:87]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=0,ME...
+Compiling module xpm.xpm_memory_spram(MEMORY_PRIMITIV...
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.simulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 975.078 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/simulation/dut/xpm_memory_spram_inst/addra}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 979.285 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol dbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:47]
+INFO: [VRFC 10-2458] undeclared symbol sbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:51]
+INFO: [VRFC 10-2458] undeclared symbol dina, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [VRFC 10-2458] undeclared symbol injectdbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [VRFC 10-2458] undeclared symbol injectsbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+INFO: [VRFC 10-2458] undeclared symbol rsta, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+INFO: [VRFC 10-2458] undeclared symbol sleep, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:85]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:87]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=0,ME...
+Compiling module xpm.xpm_memory_spram(MEMORY_PRIMITIV...
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.simulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 32
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 979.938 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 979.938 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 979.938 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/simulation/dut/rf/x8}} {{/simulation/dut/rf/x9}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 982.391 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/simulation/dut/bcond/br_taken}} {{/simulation/dut/bcond/br_type}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 24
+value of PC is 28
+value of PC is 16
+value of PC is 20
+value of PC is 32
+value of PC is 36
+value of PC is 16
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 983.582 ; gain = 0.188
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol dbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:47]
+INFO: [VRFC 10-2458] undeclared symbol sbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:51]
+INFO: [VRFC 10-2458] undeclared symbol dina, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [VRFC 10-2458] undeclared symbol injectdbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [VRFC 10-2458] undeclared symbol injectsbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+INFO: [VRFC 10-2458] undeclared symbol rsta, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+INFO: [VRFC 10-2458] undeclared symbol sleep, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:85]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:87]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_behav xil_defaultlib.simulation xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=0,ME...
+Compiling module xpm.xpm_memory_spram(MEMORY_PRIMITIV...
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.simulation
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+value of PC is 4
+value of PC is 8
+value of PC is 12
+value of PC is 16
+value of PC is 28
+value of PC is 32
+value of PC is 12
+value of PC is 36
+value of PC is 40
+value of PC is 44
+final value of PC is 48
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 986.770 ; gain = 0.551
+set_property top simulation_hardware [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Windows/Softwares/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_hardware' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim/instruction_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj simulation_hardware_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Condition
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Immediate_Generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol reg_wr, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:24]
+INFO: [VRFC 10-2458] undeclared symbol dbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:47]
+INFO: [VRFC 10-2458] undeclared symbol sbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:51]
+INFO: [VRFC 10-2458] undeclared symbol dina, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+INFO: [VRFC 10-2458] undeclared symbol injectdbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:61]
+INFO: [VRFC 10-2458] undeclared symbol injectsbiterra, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:65]
+INFO: [VRFC 10-2458] undeclared symbol rsta, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:72]
+INFO: [VRFC 10-2458] undeclared symbol sleep, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:76]
+INFO: [VRFC 10-2458] undeclared symbol br_taken, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:85]
+INFO: [VRFC 10-2458] undeclared symbol unsign, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:87]
+INFO: [VRFC 10-2458] undeclared symbol wr_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2458] undeclared symbol rd_en, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:101]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_hardware
+INFO: [VRFC 10-2458] undeclared symbol clk_new, assumed default net type wire [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv:12]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sim_1/new/simulation_hardware.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simulation_hardware
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Windows/Softwares/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 314d34ac80b14345935d094f8015f806 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_hardware_behav xil_defaultlib.simulation_hardware xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 6 for port addra [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:54]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port dina [C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv:56]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv" Line 1. Module Register_File doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv" Line 1. Module Program_Counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv" Line 1. Module Immediate_Generator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv" Line 1. Module Branch_Condition doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv" Line 1. Module Data_Memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv" Line 1. Module Controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv" Line 1. Module Clock_divider doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Register_File
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=0,ME...
+Compiling module xpm.xpm_memory_spram(MEMORY_PRIMITIV...
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Immediate_Generator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Branch_Condition
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.Clock_divider
+Compiling module xil_defaultlib.top_hardware
+Compiling module xil_defaultlib.simulation_hardware
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot simulation_hardware_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ali11/Desktop/Single -notrace
+couldn't read file "C:/Users/ali11/Desktop/Single": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 17 13:29:41 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_hardware_behav -key {Behavioral:sim_1:Functional:simulation_hardware} -tclbatch {simulation_hardware.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source simulation_hardware.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+ERROR: Could not open VCD file dump.vcd for writing.
+value of PC is 4
+value of PC is 4
+value of PC is 8
+value of PC is 8
+value of PC is 12
+value of PC is 12
+value of PC is 16
+value of PC is 16
+value of PC is 28
+value of PC is 28
+value of PC is 32
+value of PC is 32
+value of PC is 12
+value of PC is 12
+value of PC is 36
+value of PC is 36
+value of PC is 40
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+value of PC is 4
+value of PC is 4
+value of PC is 8
+value of PC is 8
+value of PC is 12
+value of PC is 12
+value of PC is 16
+value of PC is 16
+value of PC is 28
+value of PC is 28
+value of PC is 32
+value of PC is 32
+value of PC is 12
+value of PC is 12
+value of PC is 36
+value of PC is 36
+value of PC is 40
+value of PC is 40
+value of PC is 44
+final value of PC is 44
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_hardware_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1002.246 ; gain = 10.152
+update_compile_order -fileset sim_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Wed Nov 17 13:32:29 2021] Launched synth_1...
+Run output will be captured here: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/runme.log
+[Wed Nov 17 13:32:29 2021] Launched impl_1...
+Run output will be captured here: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/impl_1/runme.log
+current_sim simulation_2
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Wed Nov 17 13:46:35 2021] Launched synth_1...
+Run output will be captured here: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/synth_1/runme.log
+[Wed Nov 17 13:46:35 2021] Launched impl_1...
+Run output will be captured here: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2045 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1867.574 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1867.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:37 ; elapsed = 00:00:30 . Memory (MB): peak = 1965.223 ; gain = 962.977
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+cd C:/Users/ali11/Desktop/Single\ Cycle\ Hardware/Single Cycle Hardware.runs/impl_1
+wrong # args: should be "cd ?dirName?"
+cd C:/Users/ali11/Desktop/Single\ Cycle\ Hardware/Single\ Cycle\ Hardware.runs/impl_1
+updatemem -force -debug -bit top_hardware.bit -meminfo ram.mmi -data ../../Single\ Cycle\ Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit
+WARNING: [Common 17-259] Unknown Tcl command 'updatemem -force -debug -bit top_hardware.bit -meminfo ram.mmi -data ../../Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+File ram.mmi does not exist
+
+Usage: updatemem [options]
+(Switches with double dash '--' can also be used with a single dash '-')
+
+Help message:
+
+  -h [ --help ]          Display help
+  --meminfo arg          Input meminfo file with extension '.mmi' or .smi (for 
+                         generating .mem files). The .mmi file can be generated
+                         using the write_mem_info TCL command in Vivado. The 
+                         Tcl generate_mem_files will generate the .smi file.
+  --data arg             Input elf or mem file to be used to populate the 
+                         BRAMs. When writing .mem files for simulation this 
+                         command line argument will only accept elf input file 
+                         type.
+  --bit arg              Input bit file
+  --proc arg             Instance path of the processor in the design
+  --out arg              Output bit file
+  --force [=arg(=1)]     Overwrite existing output bit file
+
+Examples:
+  updatemem -meminfo top.mmi -data top.elf -bit top.bit -proc system_i/microblaze -out top_out.bit
+  updatemem -meminfo top.mmi -data top.mem -bit top.bit -proc system_i/microblaze -out top_out.bit
+  updatemem -meminfo top.mmi -data top.elf -bit top.bit -proc system_i/microblaze -out top_out.bit -force
+Write out the translated elf file as a .mem file(s) for third party simulators.
+  updatemem -meminfo top.smi -data top.elf -proc system_i/microblaze
+updatemem -force -debug -bit top_hardware.bit -meminfo top_hardware.mmi -data ../../Single\ Cycle\ Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit
+WARNING: [Common 17-259] Unknown Tcl command 'updatemem -force -debug -bit top_hardware.bit -meminfo top_hardware.mmi -data ../../Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+
+****** updatemem v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Windows/Softwares/Xilinx/Vivado/2018.2/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo top_hardware.mmi -data {../../Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem} -proc xpm_memory_spram_inst/xpm_memory_base_inst -bit top_hardware.bit -out out.bit -force -debug
+0 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+update_mem failed
+ERROR: [Updatemem 57-85] Invalid processor specification of: xpm_memory_spram_inst/xpm_memory_base_inst. The known processors are: t1/xpm_memory_spram_inst/xpm_memory_base_inst 
+
+INFO: [Common 17-206] Exiting updatemem at Wed Nov 17 14:01:21 2021...
+updatemem -force -debug -bit top_hardware.bit -meminfo top_hardware.mmi -data ../../Single\ Cycle\ Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc t1/xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit
+WARNING: [Common 17-259] Unknown Tcl command 'updatemem -force -debug -bit top_hardware.bit -meminfo top_hardware.mmi -data ../../Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem -proc t1/xpm_memory_spram_inst/xpm_memory_base_inst -out out.bit' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+
+****** updatemem v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Windows/Softwares/Xilinx/Vivado/2018.2/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo top_hardware.mmi -data {../../Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem} -proc t1/xpm_memory_spram_inst/xpm_memory_base_inst -bit top_hardware.bit -out out.bit -force -debug
+
+Dump the BRAM Initialization Strings. 
+  ^^^ Bitlane with BRAM Location: RAMB18_X1Y32
+  INIT_00:0000000000000000000025032423F06F84B3F06F043346630C63049304130000
+  INIT_01:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_02:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_03:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_04:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_05:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_06:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_07:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_08:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_09:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0A:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0B:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0C:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0D:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0E:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_0F:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_10:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_11:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_12:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_13:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_14:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_15:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_16:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_17:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_18:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_19:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1A:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1B:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1C:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1D:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1E:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_1F:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_20:00000000000000000000002000203FB710213FD7102500250025005000280000
+  INIT_21:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_22:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_23:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_24:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_25:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_26:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_27:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_28:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_29:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2A:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2B:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2C:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2D:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2E:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_2F:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_30:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_31:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_32:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_33:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_34:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_35:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_36:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_37:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_38:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_39:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3A:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3B:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3C:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3D:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3E:0000000000000000000000000000000000000000000000000000000000000000
+  INIT_3F:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_00:0000000000000000000000000000000000000000000000000000000000033000
+  INITP_01:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_02:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_03:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_04:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_05:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_06:0000000000000000000000000000000000000000000000000000000000000000
+  INITP_07:0000000000000000000000000000000000000000000000000000000000000000
+
+Loading bitfile top_hardware.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream out.bit...
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+update_mem completed successfully
+update_mem: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 519.141 ; gain = 463.266
+INFO: [Common 17-206] Exiting updatemem at Wed Nov 17 14:01:52 2021...
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 17 14:02:10 2021...

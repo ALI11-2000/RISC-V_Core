@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="314d34ac80b14345935d094f8015f806"/>
@@ -31,7 +31,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="65"/>
+    <Option Name="WTXSimLaunchSim" Val="94"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -107,15 +107,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/srcs/Instruction_Memory.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Instruction_Memory.sv"/>
-          <Attr Name="ImportTime" Val="1635777361"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/srcs/Program_Counter.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Program_Counter.sv"/>
@@ -150,6 +141,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/srcs/Instruction_Memory.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/Instruction_Memory.sv"/>
+          <Attr Name="ImportTime" Val="1635777361"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/srcs/instruction_mem.mem">
         <FileInfo>
           <Attr Name="ImportPath" Val="//wsl.localhost/Ubuntu/home/ali11-2000/FYP/CA_LAB/Single-Cycle/srcs/instruction_mem.mem"/>
@@ -179,14 +180,14 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/simulation.sv">
+      <File Path="$PSRCDIR/sim_1/new/simulation_hardware.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/simulation_hardware.sv">
+      <File Path="$PSRCDIR/sim_1/new/simulation.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -196,7 +197,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="simulation"/>
+        <Option Name="TopModule" Val="simulation_hardware"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>

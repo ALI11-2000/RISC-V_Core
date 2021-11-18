@@ -17,30 +17,34 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/ali11/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9320-LAPTOP-1GJRHT52/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.cache/wt} [current_project]
-set_property parent.project_path {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.xpr} [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {d:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_mem {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem}}
+read_mem {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/instruction_mem.mem}}
 read_verilog -library xil_defaultlib -sv {
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Instruction_Memory.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv}
-  {D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/ALU.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Branch_Condition.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/Clock_divider.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Controller.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Data_Memory.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Immediate_Generator.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Program_Counter.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/Register_File.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/imports/srcs/top.sv}
+  {C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/sources_1/new/top_hardware.sv}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,8 +54,8 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}
-set_property used_in_implementation false [get_files {{D:/Ubuntu/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}]
+read_xdc {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.srcs/constrs_1/new/PROCESSOR.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Nov  4 14:14:34 2021
+| Date         : Thu Nov 18 12:58:04 2021
 | Host         : LAPTOP-1GJRHT52 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_hardware_timing_summary_routed.rpt -pb top_hardware_timing_summary_routed.pb -rpx top_hardware_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_hardware
@@ -54,15 +54,23 @@ Table of Contents
 --------------------
  There are 62 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 2408 register/latch pins with no clock driven by root clock pin: dut/clock_out_reg/Q (HIGH)
+ There are 3362 register/latch pins with no clock driven by root clock pin: dut/clock_out_reg/Q (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: t1/pc/PC_reg[2]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[0] (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: t1/pc/PC_reg[3]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[1] (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: t1/pc/PC_reg[4]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[2] (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: t1/pc/PC_reg[5]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[3] (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[4] (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[5] (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: t1/xpm_memory_spram_inst/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DOADO[6] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: toggle_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -77,7 +85,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 7320 pins that are not constrained for maximum delay. (HIGH)
+ There are 10200 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -91,7 +99,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 9 ports with no output delay specified. (HIGH)
+ There are 15 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

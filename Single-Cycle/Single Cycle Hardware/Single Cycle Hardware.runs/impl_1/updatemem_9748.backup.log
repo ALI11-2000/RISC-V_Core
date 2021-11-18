@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# updatemem v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 18 13:01:01 2021
+# Process ID: 9748
+# Current directory: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/impl_1
+# Command line: updatemem.exe -mode batch -source D:/Windows/Softwares/Xilinx/Vivado/2018.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo top_hardware.mmi -data instruction_mem.mem -proc t1/xpm_memory_spram_inst/xpm_memory_base_inst -bit top_hardware.bit -out out.bit -force -debug
+# Log file: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/impl_1/updatemem.log
+# Journal file: C:/Users/ali11/Desktop/Single Cycle Hardware/Single Cycle Hardware.runs/impl_1\updatemem.jou
+#-----------------------------------------------------------
+source D:/Windows/Softwares/Xilinx/Vivado/2018.2/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo top_hardware.mmi -data instruction_mem.mem -proc t1/xpm_memory_spram_inst/xpm_memory_base_inst -bit top_hardware.bit -out out.bit -force -debug
+Loading bitfile top_hardware.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream out.bit...
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+update_mem completed successfully
+update_mem: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 517.754 ; gain = 462.105
+INFO: [Common 17-206] Exiting updatemem at Thu Nov 18 13:01:14 2021...

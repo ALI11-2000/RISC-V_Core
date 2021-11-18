@@ -4,6 +4,7 @@ from cocotb.clock import Clock
 from cocotb.triggers import Timer, RisingEdge
 import random
 import logging
+from cocotb.wavedrom import trace
 
 #@cocotb.test()
 async def Register_Test(dut):
@@ -108,32 +109,37 @@ async def Data_Test(dut):
 
 @cocotb.test()
 async def gcd_Test(dut):
-    clk = Clock(dut.clk,10,"ns")
-    cocotb.fork(clk.start())
-    await RisingEdge(dut.clk)
-    dut.rst.value = 1
-    dut.num1.value = 2
-    dut.num2.value = 4
-    await RisingEdge(dut.clk)
-    dut.rst.value = 0
-    await RisingEdge(dut.clk)
-    await RisingEdge(dut.clk)
-    dut.hard_write.value = 1
-    await RisingEdge(dut.clk)
-    dut.hard_write.value = 0
-    for i in range(2): await RisingEdge(dut.clk)
-    while(int(dut.PC) != 40): await RisingEdge(dut.clk)
-    
-    await RisingEdge(dut.clk)
-    dut.rst.value = 1
-    dut.num1.value = 30
-    dut.num2.value = 15
-    await RisingEdge(dut.clk)
-    dut.rst.value = 0
-    await RisingEdge(dut.clk)
-    await RisingEdge(dut.clk)
-    dut.hard_write.value = 1
-    await RisingEdge(dut.clk)
-    dut.hard_write.value = 0
-    for i in range(2): await RisingEdge(dut.clk)
-    while(int(dut.PC) != 40): await RisingEdge(dut.clk)
+    with trace(dut.num1,dut.num2,dut.x10,dut.x8,dut.x9,dut.result,clk=dut.clk) as waves:
+        clk = Clock(dut.clk,10,"ns")
+        cocotb.fork(clk.start())
+        await RisingEdge(dut.clk)
+        dut.rst.value = 1
+        dut.num1.value = 2
+        dut.num2.value = 4
+        await RisingEdge(dut.clk)
+        dut.rst.value = 0
+        await RisingEdge(dut.clk)
+        await RisingEdge(dut.clk)
+        dut.hard_write.value = 1
+        await RisingEdge(dut.clk)
+        dut.hard_write.value = 0
+        for i in range(2): await RisingEdge(dut.clk)
+        while(int(dut.PC) != 40): await RisingEdge(dut.clk)
+        
+        await RisingEdge(dut.clk)
+        dut.rst.value = 1
+        dut.num1.value = 30
+        dut.num2.value = 15
+        await RisingEdge(dut.clk)
+        dut.rst.value = 0
+        await RisingEdge(dut.clk)
+        await RisingEdge(dut.clk)
+        dut.hard_write.value = 1
+        await RisingEdge(dut.clk)
+        dut.hard_write.value = 0
+        for i in range(2): await RisingEdge(dut.clk)
+        while(int(dut.PC) != 40): await RisingEdge(dut.clk)
+        j = waves.dumpj()
+        file = open("output_waveform.json", "w")
+        file.write(j)
+        file.close()
