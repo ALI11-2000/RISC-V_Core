@@ -10,8 +10,8 @@ module ALU (
             2: ALU_out = A ^^ B;// xor
             3: ALU_out = A >> B;// srli
             4: ALU_out = A >>> B;// srai
-            5: ALU_out = A || B;// or
-            6: ALU_out = A && B;// and
+            5: ALU_out = A | B;// or
+            6: ALU_out = A & B;// and
             7: ALU_out = A - B;
             8: ALU_out = A;
             9: ALU_out = B;
