@@ -158,7 +158,7 @@ We get the following waveform.
 ## CSR Support
 Now for this part of the project we are going to add CSR instruction in our pipelined processor for this purpose we are going to support three new instructions which include `csrrs`, `csrrw` and `mret`. We are going to add CSR module in our pipeline.
 
-Whenever an interrupt arrives the PC value at writeback stage is stored in `mepc` and the Decode, Execute and Writeback stages will be flushed after which the PC will be updated based on values of register `mtvec` and `mcause` when timer arrives the `mcause[30:0]` becomes 1 and the value of 'PC' will become `mtvec+ mcause[30:0] * 4` at that position the jump instruction to the handler will be available. So the handler will be executed then at the end we will return from handler to normal execution using `mret`.
+Whenever an interrupt arrives the PC value at writeback stage is stored in `mepc` and the Decode, Execute and Writeback stages will be flushed after which the PC will be updated based on values of register `mtvec` and `mcause` when timer arrives the `mcause[30:0]` becomes 1 and the value of 'PC' will become `mtvec+ mcause[30:0] * 4` at that position the jump instruction to the handler will be available. So the handler will be executed then at the end we will return from handler to normal execution using `mret`. In this case on the execution of handler the x3 register values will be toggled.
 
 ```assembly
 j main
