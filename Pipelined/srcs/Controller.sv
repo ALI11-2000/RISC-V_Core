@@ -149,6 +149,16 @@ module Controller (
                 reg_wr = 1;
                 wb_sel = 0;
             end
+            // csr
+            7'd115: begin
+                if(func3 != 0) begin
+                reg_wr = 1;
+                sel_B = 1;
+                rd_en = 1;
+                wb_sel = 4;
+                alu_op = 8;
+                end
+            end
             //default: 
         endcase
     end

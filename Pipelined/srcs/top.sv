@@ -12,6 +12,8 @@
 `include "../srcs/Writeback.sv"
 `include "../srcs/mux31.sv"
 `include "../srcs/hazard_unit.sv"
+`include "../srcs/csr.sv"
+`include "../srcs/timer.sv"
 `timescale 1ns/1ns
 
 module top(
@@ -29,12 +31,13 @@ module top(
     wire [2:0] br_type, br_typeE;
     wire [1:0] wb_sel, wb_selE, wb_selM, wb_selW, For_A, For_B;
     wire sel_A, sel_B;
-    wire [31:0] PC_D, PC_M, PC_W, Instruction_D;
+    reg csr_flag1;
+    wire [31:0] PC_D, PC_M, PC_W, Instruction_D, rdata_csr, CSR_RD;
     wire [31:0] PC_E, rs1_E, rs2_E, Immediate_Value_E, mux_out_A, mux_out_B;
-    wire [31:0] Instruction_E, WD_M, Instruction_M, RD_W, Instruction_W;
+    wire [31:0] Instruction_E, WD_M, Instruction_M, RD_W, Instruction_W, epc_evec;
 
     Decode pipeline_decode(.PC_D(PC_D), .Instruction_D(Instruction_D), .rst(rst),
-    .PC(PC), .Instruction(Instruction), .clk(clk), .StallD(StallD), .FlushD(FlushD));
+    .PC(PC), .Instruction(Instruction), .clk(clk), .StallD(StallD), .FlushD(FlushD || FlushD1));
 
     Execute pipeline_execute(
     .PC_E(PC_E), .rs1_E(rs1_E), .rs2_E(rs2_E),
@@ -45,7 +48,7 @@ module top(
     .Immediate_Value(Immediate_Value), .Instruction_D(Instruction_D),
     .alu_op(alu_op), .reg_wr(reg_wr), .sel_A(sel_A), .sel_B(sel_B),
     .wr_en(wr_en), .rd_en(rd_en), .wb_sel(wb_sel), .br_type(br_type), .clk(clk),
-    .FlushE(FlushE), .rst(rst));
+    .FlushE(FlushE || FlushE1), .rst(rst));
 
     Memory pipeline_memory(.PC_M(PC_M), .ALU_out_M(ALU_out_M), .WD_M(WD_M),
     .Instruction_M(Instruction_M), .reg_wrM(reg_wrM), .wr_enM(wr_enM),
@@ -58,7 +61,8 @@ module top(
     Writeback pipeline_writeback( .PC_W(PC_W), .ALU_out_W(ALU_out_W), .RD_W(RD_W), .Instruction_W(Instruction_W),
     .reg_wrW(reg_wrW), .wb_selW(wb_selW),
     .PC_M(PC_M), .ALU_out_M(ALU_out_M), .RD_M(rdata), .Instruction_M(Instruction_M),
-    .reg_wrM(reg_wrM), .wb_selM(wb_selM), .clk(clk), .rst(rst)
+    .reg_wrM(reg_wrM), .wb_selM(wb_selM), .clk(clk), .rst(rst),
+    .rdata(rdata_csr), .CSR_RD(CSR_RD), .FlushW(FlushW)
     );
 
     Register_File rf(.rdata1(rdata1), .rdata2(rdata2), 
@@ -70,7 +74,9 @@ module top(
 
     Instruction_Memory im(.Instruction(Instruction), .Address(PC));
 
-    Program_Counter pc(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC), .hard_write(hard_write), .StallF(StallF));
+    Program_Counter pc(.ALU_out(ALU_out), .br_taken(br_taken), .clk(clk), .rst(rst), .PC(PC), .hard_write(hard_write),
+                       .StallF(StallF), .csr(csr_flag), .epc_evec(epc_evec));
+
 
     Immediate_Generator ig(.Immediate_Value(Immediate_Value), .Instruction(Instruction_D), .unsign(unsign));
 
@@ -96,12 +102,19 @@ module top(
                      .rdata(rdata), .wdata(WD_M), .addr(ALU_out_M),
                      .wr_en(wr_enM), .rd_en(rd_enM), .clk(clk), .rst(rst));
 
+    csr csr1(.rdata(rdata_csr), .epc_evec(epc_evec), .csr_flag(csr_flag),
+    .addr({{20'b0},{Instruction_M[31:20]}}), .operand(ALU_out_M), .Instruction_M(Instruction_M), .PC_M(PC_M),
+    .clk(clk), .rst(rst), .interrupt(interrupt), .FlushD1(FlushD1), .FlushE1(FlushE1), .FlushW(FlushW)
+    );
+
+    timer interrupt1(.interrupt(interrupt),.clk(clk), .rst(rst));
 
     always_comb begin 
         case (wb_selW)
             0 : wdata <=  PC_W + 4;
             1 : wdata <= ALU_out_W;
             2 : wdata <= RD_W;
+            3 : wdata <= CSR_RD;
         endcase
     end 
 

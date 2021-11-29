@@ -7,7 +7,7 @@ module ALU (
         case(alu_op)
             0: ALU_out = A + B;// addi
             1: ALU_out = A << B;// slli
-            2: ALU_out = A ^^ B;// xor
+            2: ALU_out = A ^ B;// xor
             3: ALU_out = A >> B;// srli
             4: ALU_out = A >>> B;// srai
             5: ALU_out = A | B;// or
