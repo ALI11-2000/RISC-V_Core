@@ -1,0 +1,28 @@
+
+program.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <handler-0x8>:
+   10074:	0100006f          	j	10084 <reset>
+   10078:	0040006f          	j	1007c <handler>
+
+0001007c <handler>:
+   1007c:	fff64613          	not	a2,a2
+   10080:	30200073          	mret
+
+00010084 <reset>:
+   10084:	08000513          	li	a0,128
+   10088:	00100693          	li	a3,1
+   1008c:	00000013          	nop
+   10090:	00000013          	nop
+   10094:	00000013          	nop
+   10098:	00000013          	nop
+   1009c:	00000013          	nop
+   100a0:	30569073          	csrw	mtvec,a3
+   100a4:	30451073          	csrw	mie,a0
+
+000100a8 <main>:
+   100a8:	00158593          	addi	a1,a1,1
+   100ac:	ffdff06f          	j	100a8 <main>

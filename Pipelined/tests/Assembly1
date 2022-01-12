@@ -1,0 +1,16 @@
+
+.PHONY: all
+all:
+	rm -rf *.o *.elf *.txt *.mem
+	riscv64-unknown-elf-as -c -o startup.o startup.s -march=rv32i -mabi=ilp32
+	riscv64-unknown-elf-gcc -o program.elf startup.o -nostdlib -march=rv32i -mabi=ilp32
+	riscv64-unknown-elf-objdump -d program.elf >> disassembly.txt
+	rm -rf *.o *.elf
+	python assembly_conv.py
+
+.PHONY: clean
+clean::
+	rm -rf *.vcd *.xml __pycache__ sim_build
+
+
+

@@ -10,7 +10,11 @@ module Register_File (
     always @(negedge clk ) begin
         if(rst) begin
             for (i = 0; i <= 31; i=i+1) begin
-                register_file[i] <= 0;
+                if(i==2) begin
+                    register_file[i] <= 32'd255;
+                end else begin
+                    register_file[i] <= 0;
+                end
             end
         end else if(reg_wr) begin
             if(waddr != 0)

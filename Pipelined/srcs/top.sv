@@ -14,6 +14,7 @@
 `include "../srcs/hazard_unit.sv"
 `include "../srcs/csr.sv"
 `include "../srcs/timer.sv"
+`include "../srcs/LSU.sv"
 `timescale 1ns/1ns
 
 module top(
@@ -21,14 +22,14 @@ module top(
     input clk, rst
 );
     
-    wire[31:0] rdata1, rdata2;
+    wire[31:0] rdata1, rdata2, rdata_out, wdata_out, addr;
     wire [31:0] x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31;
     wire [4:0] raddr1, raddr2, waddr;
     reg [31:0] wdata;
     wire [31:0] Instruction, PC, ALU_out, ALU_out_M, ALU_out_W, Immediate_Value, rdata;
     reg [31:0] A, B;
     wire [3:0] alu_op, alu_opE;
-    wire [2:0] br_type, br_typeE;
+    wire [2:0] br_type, br_typeE, rd_en, wr_en, rd_enE, wr_enE, rd_enM, wr_enM;
     wire [1:0] wb_sel, wb_selE, wb_selM, wb_selW, For_A, For_B;
     wire sel_A, sel_B;
     reg csr_flag1;
@@ -60,7 +61,7 @@ module top(
 
     Writeback pipeline_writeback( .PC_W(PC_W), .ALU_out_W(ALU_out_W), .RD_W(RD_W), .Instruction_W(Instruction_W),
     .reg_wrW(reg_wrW), .wb_selW(wb_selW),
-    .PC_M(PC_M), .ALU_out_M(ALU_out_M), .RD_M(rdata), .Instruction_M(Instruction_M),
+    .PC_M(PC_M), .ALU_out_M(ALU_out_M), .RD_M(rdata_out), .Instruction_M(Instruction_M),
     .reg_wrM(reg_wrM), .wb_selM(wb_selM), .clk(clk), .rst(rst),
     .rdata(rdata_csr), .CSR_RD(CSR_RD), .FlushW(FlushW)
     );
@@ -98,8 +99,12 @@ module top(
     .Instruction_D(Instruction_D), .wb_selE(wb_selE), .StallF(StallF), .StallD(StallD), .FlushE(FlushE),
     .FlushD(FlushD), .br_taken(br_taken));
 
+    LSU  ls(.rd_en(rd_enM), .wr_en(wr_enM), .address(ALU_out_M), .wdata(WD_M), 
+    .rdata_in(rdata),
+    .rdata_out(rdata_out), .wdata_out(wdata_out), .address_out(addr));
+
     Data_Memory dmem(.num1(num1), .num2(num2), .result(result), .hard_write(hard_write),
-                     .rdata(rdata), .wdata(WD_M), .addr(ALU_out_M),
+                     .rdata(rdata), .wdata(wdata_out), .addr(addr),
                      .wr_en(wr_enM), .rd_en(rd_enM), .clk(clk), .rst(rst));
 
     csr csr1(.rdata(rdata_csr), .epc_evec(epc_evec), .csr_flag(csr_flag),

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1641930108" />
+    <testcase name="gcd_Test" classname="test" file="/home/ali11-2000/FYP/CA_LAB/Pipelined/tests/test.py" lineno="9" time="0.07440519332885742" sim_time_ns="1010.001" ratio_time="13574.334731394074" />
+  </testsuite>
+</testsuites>

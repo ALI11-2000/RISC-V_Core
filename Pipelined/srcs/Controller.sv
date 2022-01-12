@@ -1,7 +1,7 @@
 module Controller (
     input [31:0] Instruction,
     output reg [3:0] alu_op,output reg reg_wr, sel_A, sel_B,
-    wr_en, rd_en, unsign,output reg [2:0] br_type, output reg [1:0] wb_sel
+     unsign,output reg [2:0] br_type, wr_en, rd_en, output reg [1:0] wb_sel
 );  
     wire [6:0] opcode, func7 ;
     wire [2:0] func3;
@@ -23,14 +23,26 @@ module Controller (
             7'd3: begin
                 reg_wr = 1;
                 sel_B = 1;
-                rd_en = 1;
                 wb_sel = 2;
+                case (func3)
+                    3'd0: rd_en = 3'd1;// b
+                    3'd1: rd_en = 3'd2;// h
+                    3'd2: rd_en = 3'd3;// w
+                    3'd4: rd_en = 3'd4;// bu
+                    3'd5: rd_en = 3'd5;// hu
+                    default: rd_en = 0;
+                endcase
             end
             // S type sw only
             7'd35: begin
                 sel_B = 1;
-                wr_en = 1;
                 wb_sel = 2;
+                case (func3)
+                    3'd0: wr_en = 3'd1;//b
+                    3'd1: wr_en = 3'd2;//h
+                    3'd2: wr_en = 3'd3;//w 
+                    default: wr_en = 0;
+                endcase
             end
             // I type
             7'd19: begin
@@ -39,30 +51,30 @@ module Controller (
                 rd_en = 1;
                 wb_sel = 1;
                 case (func3)
-                    7'd0: alu_op = 0;
-                    7'd1: begin
+                    3'd0: alu_op = 0;
+                    3'd1: begin
                         alu_op = 1;
                         unsign = 1;
                     end 
-                    7'd2: begin
+                    3'd2: begin
                         alu_op = 10;
                     end
-                    7'd3: begin
+                    3'd3: begin
                         alu_op = 10;
                         unsign = 1;
                     end
-                    7'd4: begin
+                    3'd4: begin
                         alu_op = 2;
                     end
-                    7'd5: begin
+                    3'd5: begin
                         case(func7)
                         7'b0 : alu_op = 3;
                         7'b0100000: alu_op = 4;
                         default: alu_op = 3;
                         endcase
                     end
-                    7'd6: alu_op = 5;
-                    7'd7: alu_op = 6;
+                    3'd6: alu_op = 5;
+                    3'd7: alu_op = 6;
                     default: alu_op = 0;
                 endcase
             end
@@ -87,35 +99,35 @@ module Controller (
                 rd_en = 1;
                 wb_sel = 1;
                 case (func3)
-                    7'd0:begin
+                    3'd0:begin
                         case (func7)
                             7'b0: alu_op = 0;
                             7'b0100000: alu_op = 7;
                             default: alu_op = 0;
                         endcase
                     end 
-                    7'd1: begin
+                    3'd1: begin
                         alu_op = 1;
                     end 
-                    7'd2: begin
+                    3'd2: begin
                         alu_op = 10;
                     end
-                    7'd3: begin
+                    3'd3: begin
                         alu_op = 10;
                         unsign = 1;
                     end
-                    7'd4: begin
+                    3'd4: begin
                         alu_op = 2;
                     end
-                    7'd5: begin
+                    3'd5: begin
                         case(func7)
                         7'd0 : alu_op = 3;
                         7'b0100000: alu_op = 4;
                         default: alu_op = 3;
                         endcase
                     end
-                    7'd6: alu_op = 5;
-                    7'd7: alu_op = 6;
+                    3'd6: alu_op = 5;
+                    3'd7: alu_op = 6;
                     default: alu_op = 0;
                 endcase
             end
