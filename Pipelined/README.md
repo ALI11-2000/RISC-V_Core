@@ -16,6 +16,8 @@ All the test are written in the **test.py** in **tests** directory. Run the make
 For the first phase of this project, we are going to  converting our [Single Cycle Processor](../Single-Cycle) to the pipelined version as shown in figure below.
 
 ![Pipelined Processor\label{abc}](Figures/ckt.png)
+**Note:** This figure has been taken from the slides of Dr. Muhaamad Tahir.
+
 For simulation, **cocotb** is used with **iverilog**.
 
 For the five stages of the pipeline the four registers have been added which will not only propogate the inputs and outputs of each stage but will also propogate their control signals. The four registers have been added for the pipeline these registers are named as follows.
