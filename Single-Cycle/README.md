@@ -50,6 +50,9 @@ We have the following file structure. All the test are written in the **test.py*
 # Single Cycle RISC-V Processor
 For this project, we are going to implement single cycle RISC-V processor as shown in figure below.
 ![Single Cycle Processor\label{abc}](Figures/ckt.png)
+
+**Note:** This figure has been taken from the slides of Dr. Muhaamad Tahir.
+
 For simulation, **cocotb** is used with **iverilog**.
 
 ## Top Module
