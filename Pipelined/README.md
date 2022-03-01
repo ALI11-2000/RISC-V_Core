@@ -158,6 +158,8 @@ fedff06f
 We get the following waveform.
 ![Pipeline with hazards removal](Figures/phase2_data_out2.png)
 
+**Note:** This figure has been taken from the slides of Dr. Muhaamad Tahir.
+
 ## CSR Support
 Now for this part of the project we are going to add CSR instruction in our pipelined processor for this purpose we are going to support three new instructions which include `csrrs`, `csrrw` and `mret`. We are going to add CSR module in our pipeline.
 
