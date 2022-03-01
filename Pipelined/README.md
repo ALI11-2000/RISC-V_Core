@@ -16,6 +16,9 @@ All the test are written in the **test.py** in **tests** directory. Run the make
 For the first phase of this project, we are going to  converting our [Single Cycle Processor](../Single-Cycle) to the pipelined version as shown in figure below.
 
 ![Pipelined Processor\label{abc}](Figures/ckt.png)
+
+**Note:** This figure has been taken from the slides of Dr. Muhaamad Tahir.
+
 For simulation, **cocotb** is used with **iverilog**.
 
 For the five stages of the pipeline the four registers have been added which will not only propogate the inputs and outputs of each stage but will also propogate their control signals. The four registers have been added for the pipeline these registers are named as follows.
@@ -50,6 +53,8 @@ We get the following output from our simulation.
 For phase 2, we are going to remove the data hazards first for which we are going to add the [Hhazard detection unit](srcs/forwarding_unit.sv). The forwarding unit compares the destination register of the previous and the second previous instruction with the source registers of the current instruction and forwards the ALU output from the memory and the writeback stage to the ALU inputs at the execution stage based on the comparison and the register write signals at the memory and writeback stage.
 
 ![Phase 2 ckt diagram](Figures/ckt2.png)
+
+**Note:** This figure has been taken from the slides of Dr. Muhaamad Tahir.
 
 The forwarding unit implements the following conditions.
 ```verilog
